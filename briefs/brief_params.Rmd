@@ -1,0 +1,43 @@
+---
+title: "Forest Regeneration Brief"
+date: "`r Sys.Date()`"
+output: 
+  pdf_document:
+    highlight: tango
+fontsize: 12pt
+geometry: margin = 1in
+params:
+  park: park
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = FALSE)
+```
+
+
+```{r imports, include = FALSE, results = 'hide'}
+library(tidyverse)
+library(forestTrends)
+library(png)
+library(knitr)
+
+dens_df <- read.csv("../data/EFWG_full_dataset_20211101.csv")
+park_names <- read.csv("../data/park_names.csv")
+```
+
+
+```{r, list_setup, include = FALSE}
+parks <- unique(dens_df$Unit_Code)
+networks <- unique(dens_df$Network)
+
+parkname <- park_names %>% 
+  filter(park == x)
+```
+
+
+# `r paste(parkname$park_full)`
+
+
+
+
+

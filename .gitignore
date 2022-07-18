@@ -1,0 +1,9 @@
+.Rproj.user
+.Rhistory
+.RData
+.Ruserdata
+data/.DS_Store
+data/ERMN_data/
+data/MIDN_data/
+data/NCRN_data/
+data/NETN_data/

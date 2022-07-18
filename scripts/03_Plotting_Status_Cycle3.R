@@ -323,13 +323,13 @@ p
 
 
 # Species level composition plot (Fig 28)  
-comp <- read.csv("./data/EFWG_proportion_regen_species_20220325.csv")
+comp <- read.csv("./data/EFWG_proportion_regen_species_20220325.csv") %>% as_tibble()
 head(comp)
 names(comp)
 comp2 <- left_join(comp, dens_c3 %>% select(Unit_Code, Network) %>% unique(),
-                   by = c("Unit_Code"))
+                   by = c("Unit_Code")) %>% as_tibble()
 
-comp_long <- comp2 %>% pivot_longer(-c("Unit_Code", "lat_rank", "Network", "park_order"),
+comp_long <- comp2 %>% pivot_longer(-c("Unit_Code", "lat_rank", "Network"),
                                     names_to = 'Metric',
                                     values_to = 'Prop') %>% 
                        filter(!Metric %in% c("sap_ba_tot", "sap_dens_tot", "seed_dens_tot")) %>% 
@@ -346,8 +346,7 @@ comp_final <- comp_long %>% mutate(resp = gsub("_FRAX", "",
                                                          .data$Metric))),
                                    Metric = case_when(resp == 'sap_ba_pct' ~ "Sapling BA",
                                                       resp == "sap_dens_pct" ~ "Sapling Density",
-                                                      resp == "seed_dens_pct" ~ "Seedling Density")) %>%
-                            arrange(park_order, Metric, Species) %>% select(-resp)
+                                                      resp == "seed_dens_pct" ~ "Seedling Density"))
                             # select(-Metric) %>%
                             # pivot_wider(names_from = resp, values_from = Prop)
 
@@ -355,6 +354,8 @@ head(comp_final)
 
 #comp_spp <- comp_lat %>% filter(Species %in% c("Ash", "American Beech", "Paw paw"))
 comp_final$park_order <- reorder(comp_final$Unit_Code, desc(comp_final$lat_rank))
+
+comp_final <- comp_final %>% arrange(park_order, Metric, Species) %>% select(-resp)
 
 # Fake plot for species group legend
 leg_bar_spp <- ggplot(data = data.frame(spgrp = c("ASITRI", "FRAX", "FAGGRA"),

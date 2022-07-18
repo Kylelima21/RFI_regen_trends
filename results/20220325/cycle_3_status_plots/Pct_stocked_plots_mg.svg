@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<svg xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink' class='svglite' width='792.00pt' height='576.00pt' viewBox='0 0 792.00 576.00'>
+<defs>
+  <style type='text/css'><![CDATA[
+    .svglite line, .svglite polyline, .svglite polygon, .svglite path, .svglite rect, .svglite circle {
+      fill: none;
+      stroke: #000000;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      stroke-miterlimit: 10.00;
+    }
+    .svglite text {
+      white-space: pre;
+    }
+  ]]></style>
+</defs>
+<rect width='100%' height='100%' style='stroke: none; fill: #FFFFFF;'/>
+<defs>
+  <clipPath id='cpMC4wMHw3OTIuMDB8MC4wMHw1NzYuMDA='>
+    <rect x='0.00' y='0.00' width='792.00' height='576.00' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMC4wMHw3OTIuMDB8MC4wMHw1NzYuMDA=)'>
+<rect x='0.00' y='0.00' width='792.00' height='576.00' style='stroke-width: 1.07; stroke: #FFFFFF; fill: #FFFFFF;' />
+</g>
+<defs>
+  <clipPath id='cpMzUuNzJ8Nzg2LjUyfDUuNDh8NDMxLjMz'>
+    <rect x='35.72' y='5.48' width='750.81' height='425.85' />
+  </clipPath>
+</defs>
+<g clip-path='url(#cpMzUuNzJ8Nzg2LjUyfDUuNDh8NDMxLjMz)'>
+<rect x='49.45' y='153.88' width='82.41' height='258.09' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #9883CA;' />
+<rect x='507.26' y='368.96' width='82.41' height='43.02' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #92CA83;' />
+<rect x='324.13' y='343.15' width='82.41' height='68.82' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #E7DA7E;' />
+<rect x='598.82' y='369.74' width='82.41' height='42.23' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #83CAB2;' />
+<rect x='141.01' y='326.91' width='82.41' height='85.06' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #90B2EC;' />
+<rect x='690.38' y='386.17' width='82.41' height='25.81' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #E4ACE1;' />
+<rect x='232.57' y='331.88' width='82.41' height='80.10' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #F6CC78;' />
+<rect x='415.70' y='364.76' width='82.41' height='47.21' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #FF6960;' />
+<line x1='35.72' y1='218.41' x2='786.52' y2='218.41' style='stroke-width: 1.07; stroke-dasharray: 5.69,5.69; stroke-linecap: butt;' />
+<rect x='35.72' y='5.48' width='750.81' height='425.85' style='stroke-width: 1.07; stroke: #333333;' />
+</g>
+<g clip-path='url(#cpMC4wMHw3OTIuMDB8MC4wMHw1NzYuMDA=)'>
+<text x='30.78' y='415.92' text-anchor='end' style='font-size: 11.00px;fill: #4D4D4D; font-family: "Arial";' textLength='6.12px' lengthAdjust='spacingAndGlyphs'>0</text>
+<text x='30.78' y='338.49' text-anchor='end' style='font-size: 11.00px;fill: #4D4D4D; font-family: "Arial";' textLength='12.24px' lengthAdjust='spacingAndGlyphs'>10</text>
+<text x='30.78' y='261.07' text-anchor='end' style='font-size: 11.00px;fill: #4D4D4D; font-family: "Arial";' textLength='12.24px' lengthAdjust='spacingAndGlyphs'>20</text>
+<text x='30.78' y='183.64' text-anchor='end' style='font-size: 11.00px;fill: #4D4D4D; font-family: "Arial";' textLength='12.24px' lengthAdjust='spacingAndGlyphs'>30</text>
+<text x='30.78' y='106.21' text-anchor='end' style='font-size: 11.00px;fill: #4D4D4D; font-family: "Arial";' textLength='12.24px' lengthAdjust='spacingAndGlyphs'>40</text>
+<text x='30.78' y='28.78' text-anchor='end' style='font-size: 11.00px;fill: #4D4D4D; font-family: "Arial";' textLength='12.24px' lengthAdjust='spacingAndGlyphs'>50</text>
+<polyline points='32.98,411.98 35.72,411.98 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='32.98,334.55 35.72,334.55 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='32.98,257.12 35.72,257.12 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='32.98,179.69 35.72,179.69 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='32.98,102.26 35.72,102.26 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='32.98,24.84 35.72,24.84 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='90.65,434.07 90.65,431.33 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='182.21,434.07 182.21,431.33 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='273.78,434.07 273.78,431.33 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='365.34,434.07 365.34,431.33 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='456.90,434.07 456.90,431.33 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='548.46,434.07 548.46,431.33 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='640.02,434.07 640.02,431.33 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<polyline points='731.58,434.07 731.58,431.33 ' style='stroke-width: 1.07; stroke: #333333; stroke-linecap: butt;' />
+<text transform='translate(96.23,441.84) rotate(-45)' text-anchor='end' style='font-size: 11.00px;fill: #4D4D4D; font-family: "Arial";' textLength='72.16px' lengthAdjust='spacingAndGlyphs'>Acadian Mixed</text>
+<text transform='translate(187.79,441.84) rotate(-45)' text-anchor='end' style='font-size: 11.00px;fill: #4D4D4D; font-family: "Arial";' textLength='97.82px' lengthAdjust='spacingAndGlyphs'>Northern Oak - Pine</text>
+<text transform='translate(279.36,441.84) rotate(-45)' text-anchor='end' style='font-size: 11.00px;fill: #4D4D4D; font-family: "Arial";' textLength='99.67px' lengthAdjust='spacingAndGlyphs'>Southern Oak - Pine</text>
+<text transform='translate(370.92,441.84) rotate(-45)' text-anchor='end' style='font-size: 11.00px;fill: #4D4D4D; font-family: "Arial";' textLength='64.81px' lengthAdjust='spacingAndGlyphs'>Coastal Plain</text>
+<text transform='translate(462.48,441.84) rotate(-45)' text-anchor='end' style='font-size: 11.00px;fill: #4D4D4D; font-family: "Arial";' textLength='86.23px' lengthAdjust='spacingAndGlyphs'>Southern Ruderal</text>
+<text transform='translate(554.04,441.84) rotate(-45)' text-anchor='end' style='font-size: 11.00px;fill: #4D4D4D; font-family: "Arial";' textLength='92.34px' lengthAdjust='spacingAndGlyphs'>Appalachian Mesic</text>
+<text transform='translate(645.60,441.84) rotate(-45)' text-anchor='end' style='font-size: 11.00px;fill: #4D4D4D; font-family: "Arial";' textLength='50.76px' lengthAdjust='spacingAndGlyphs'>Floodplain</text>
+<text transform='translate(737.16,441.84) rotate(-45)' text-anchor='end' style='font-size: 11.00px;fill: #4D4D4D; font-family: "Arial";' textLength='84.38px' lengthAdjust='spacingAndGlyphs'>Northern Ruderal</text>
+<text transform='translate(13.37,218.41) rotate(-90)' text-anchor='middle' style='font-size: 11.00px; font-family: "Arial";' textLength='80.09px' lengthAdjust='spacingAndGlyphs'>% Stocked Plots</text>
+<rect x='155.03' y='525.00' width='512.18' height='45.52' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+<text x='160.51' y='551.71' style='font-size: 11.00px; font-family: "Arial";' textLength='33.63px' lengthAdjust='spacingAndGlyphs'>Group:</text>
+<rect x='199.62' y='530.48' width='17.28' height='17.28' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+<rect x='200.33' y='531.19' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #9883CA;' />
+<rect x='199.62' y='547.76' width='17.28' height='17.28' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+<rect x='200.33' y='548.47' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #92CA83;' />
+<rect x='320.20' y='530.48' width='17.28' height='17.28' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+<rect x='320.90' y='531.19' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #E7DA7E;' />
+<rect x='320.20' y='547.76' width='17.28' height='17.28' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+<rect x='320.90' y='548.47' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #83CAB2;' />
+<rect x='413.24' y='530.48' width='17.28' height='17.28' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+<rect x='413.95' y='531.19' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #90B2EC;' />
+<rect x='413.24' y='547.76' width='17.28' height='17.28' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+<rect x='413.95' y='548.47' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #E4ACE1;' />
+<rect x='539.30' y='530.48' width='17.28' height='17.28' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+<rect x='540.01' y='531.19' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #F6CC78;' />
+<rect x='539.30' y='547.76' width='17.28' height='17.28' style='stroke-width: 1.07; stroke: none; fill: #FFFFFF;' />
+<rect x='540.01' y='548.47' width='15.86' height='15.86' style='stroke-width: 1.07; stroke: none; stroke-linecap: square; stroke-linejoin: miter; fill: #FF6960;' />
+<text x='222.38' y='543.07' style='font-size: 11.00px; font-family: "Arial";' textLength='72.16px' lengthAdjust='spacingAndGlyphs'>Acadian Mixed</text>
+<text x='222.38' y='560.35' style='font-size: 11.00px; font-family: "Arial";' textLength='92.34px' lengthAdjust='spacingAndGlyphs'>Appalachian Mesic</text>
+<text x='342.96' y='543.07' style='font-size: 11.00px; font-family: "Arial";' textLength='64.81px' lengthAdjust='spacingAndGlyphs'>Coastal Plain</text>
+<text x='342.96' y='560.35' style='font-size: 11.00px; font-family: "Arial";' textLength='50.76px' lengthAdjust='spacingAndGlyphs'>Floodplain</text>
+<text x='436.00' y='543.07' style='font-size: 11.00px; font-family: "Arial";' textLength='97.82px' lengthAdjust='spacingAndGlyphs'>Northern Oak - Pine</text>
+<text x='436.00' y='560.35' style='font-size: 11.00px; font-family: "Arial";' textLength='84.38px' lengthAdjust='spacingAndGlyphs'>Northern Ruderal</text>
+<text x='562.06' y='543.07' style='font-size: 11.00px; font-family: "Arial";' textLength='99.67px' lengthAdjust='spacingAndGlyphs'>Southern Oak - Pine</text>
+<text x='562.06' y='560.35' style='font-size: 11.00px; font-family: "Arial";' textLength='86.23px' lengthAdjust='spacingAndGlyphs'>Southern Ruderal</text>
+</g>
+</svg>
