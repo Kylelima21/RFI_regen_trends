@@ -1,13 +1,15 @@
-library(purrr)
+# Script to run the function that creates the parameterized briefs
+# Kyle Lima - Schoodic Institute at Acadia National Park
 
-park_names <- read.csv("./data/park_names.csv")
 
-test <- c("ACAD", "GETT")
+# Source function
+source("./briefs/scripts/run_briefs_function.R")
 
-make_briefs <- function(x) {
-  rmarkdown::render(input = "briefs/brief_params.Rmd", 
-                    output_file = sprintf("outputs/%s_forest_brief.pdf", x),
-                    params = list(park = x))
-}
 
-map(test, make_briefs)
+# Read in data
+park_names <- read.csv("./data/park_names.csv") %>% 
+  filter(park == "ACAD" | park == "GETT")
+
+
+# Create briefs
+run_briefs(park_names)

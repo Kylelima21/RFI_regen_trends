@@ -1,13 +1,23 @@
 ---
-title: "Forest Regeneration Brief"
+title: "`r paste(park_name)` Forest Regeneration Brief"
 date: "`r Sys.Date()`"
 output: 
   pdf_document:
     highlight: tango
+sansfont: Times New Roman
 fontsize: 12pt
 geometry: margin = 1in
+header-includes:
+  - \usepackage{titling}
+  - \pretitle{\begin{flushleft}\huge\bfseries}
+  - \posttitle{\end{flushleft}}  
+  - \preauthor{\begin{flushleft}\Large}
+  - \postauthor{\end{flushleft}}  
+  - \predate{\begin{flushleft}}
+  - \postdate{\end{flushleft}}
 params:
   park: park
+
 ---
 
 ```{r setup, include=FALSE}
@@ -29,13 +39,10 @@ park_names <- read.csv("../data/park_names.csv")
 ```{r, list_setup, include = FALSE}
 parks <- unique(dens_df$Unit_Code)
 networks <- unique(dens_df$Network)
-
-parkname <- park_names %>% 
-  filter(park == x)
 ```
 
 
-# `r paste(parkname$park_full)`
+# `r paste(park_name)`
 
 
 
