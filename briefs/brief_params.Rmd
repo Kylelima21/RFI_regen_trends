@@ -1,23 +1,37 @@
 ---
 title: "`r paste(park_name)` Forest Regeneration Brief"
-date: "`r Sys.Date()`"
 output: 
   pdf_document:
     highlight: tango
-sansfont: Times New Roman
+sansfont: Arial
 fontsize: 12pt
 geometry: margin = 1in
 header-includes:
   - \usepackage{titling}
-  - \pretitle{\begin{flushleft}\huge\bfseries}
-  - \posttitle{\end{flushleft}}  
-  - \preauthor{\begin{flushleft}\Large}
-  - \postauthor{\end{flushleft}}  
-  - \predate{\begin{flushleft}}
-  - \postdate{\end{flushleft}}
+  - \usepackage{graphicx}
+  - \usepackage{fancyhdr}
+  - \usepackage{background}
+  - \usepackage{hyperref}
+  - \usepackage{caption}
+  - \captionsetup[figure]{labelformat=empty}
+  - \pagestyle{fancy}
+  - \fancyhf{}
+  - \fancypagestyle{plain}{\pagestyle{fancy}}
+  - \fancyhead[L]{\ifnum\value{page} < 2 {\includegraphics[height=.95in,width=.95in]{inputs/NPS_logo.png}} \else {Eastern Forest Working Group}\small \fi}
+  - \chead[C]{\ifnum\value{page} < 2 {Eastern Forest Working Group\\ \small Inventory and Monitoring Program\\ \hspace{1cm}\\Forest Health Monitoring} \else \fi}
+  - \fancyhead[R]{\ifnum\value{page} < 2 {\includegraphics[height=.95in,width=.95in]{inputs/Schoodic_Stacked.jpeg}} \else {\today}\small \fi}
+  - \setlength{\footskip}{34pt}
+  - \fancyfoot[C]{\thepage\footnotesize}
+  - \rfoot{{\includegraphics[height=\footskip]{inputs/Schoodic_Horizontal.jpeg}}\\ \scriptsize{\href{https://schoodicinstitute.org}{Schoodic Institute at Acadia National Park}}}
+  - \lfoot{{\includegraphics[height=\footskip]{inputs/NPS_logo.png}}\\ \scriptsize{\href{https://www.nps.gov/index.htm}{National Park Service\\U.S. Department of the Interior}}}
+  - \backgroundsetup{scale=1,opacity=0.5,angle=0,pages=all,placement=bottom,contents={\includegraphics[width=8.5in]{inputs/background.jpg}}}
+  - \pretitle{\begin{center}\LARGE\bfseries\vspace{1cm}}
+  - \posttitle{\end{center}}
+  - \setlength{\columnsep}{10pt}
+classoption:
+- twocolumn
 params:
   park: park
-
 ---
 
 ```{r setup, include=FALSE}
@@ -30,20 +44,43 @@ library(tidyverse)
 library(forestTrends)
 library(png)
 library(knitr)
+library(cowplot)
+library(magick)
 
 dens_df <- read.csv("../data/EFWG_full_dataset_20211101.csv")
-park_names <- read.csv("../data/park_names.csv")
+park_info <- read.csv("../data/park_names.csv") %>% 
+  filter(park_full == park_name)
+park_data <- read.csv("../results/20220325/final_park_results.csv") %>% 
+  filter(park == paste(park_info$park)) %>% 
+  filter(labels == "Seedling Density" & metgrp == "Regen. Status") %>% 
+  mutate(park_reggrp = ifelse(park_reggrp == "Sec.", "Secure", park_reggrp))
 ```
 
 
-```{r, list_setup, include = FALSE}
-parks <- unique(dens_df$Unit_Code)
-networks <- unique(dens_df$Network)
+### Introduction
+
+Forests cover tens of thousands of acres in eastern national parks, providing habitat for countless plants, animals, fungi, and insects. Park forests protect water quality and soil stability, as well as influence our local weather and reduce some gases that contribute to climate change. However, these critical park resources face a range of threats.
+ 
+Forest health monitoring data indicate significant threats to future sustainability of park forests. Many parks lack the minimum level of seedling and sapling density needed to replace canopy trees as they die, whether from age, natural disturbance, or the effects of non-native pests and pathogens. When forests lack sufficient regeneration, or the species composition in the regeneration layer does not match the canopy, we call this a regeneration debt.
+
+```{r figSvg, fig.cap = "Figure 2. Trends in tree, sapling and seedling abundance by species group.", fig.align = "center", dpi = 600, out.width = "7.5in"}
+fig_svg <- cowplot::ggdraw() + cowplot::draw_image(paste0("../results/20220325/park_plots/total/", park_info$park, "_Total_metrics.svg"))
+
+plot(fig_svg)
+```
+
+### Park Summary
+`r paste(park_info$park_full)` (`r paste(park_info$park)`) is located in the `r ifelse(park_info$Network == "NETN", paste("Northeast Temperate"), ifelse(park_info$Network == "NCRN", paste("National Capital Region"), ifelse(park_info$Network == "NCBN", paste("Northeast Coastal and Barrier"), ifelse(park_info$Network == "MIDN", paste("Mid-Atlantic"), paste("Eastern Rivers and Mountains")))))` `r paste0( '(', park_info$Network, ')')` Inventory and Monitoring Network (Figure 1). This park's regeneration status is categorized as `r paste(park_data$park_reggrp)`.
+
+
+```{r fig.cap = "Figure 1. Map of parks included in regional regeneration project.", out.width='100%', fig.align = "center", dpi = 600}
+include_graphics("../rmd/map_of_parks.jpg")
 ```
 
 
-# `r paste(park_name)`
 
+### Source Publication
+XXX
 
 
 

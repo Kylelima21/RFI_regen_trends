@@ -1,5 +1,5 @@
 #---------------------------------------------------------------------------------------------------
-# Plotting staus and trends grid for Figure 2 in ms
+# Plotting status and trends grid for Figure 2 in ms
 #   Code written by Kate Miller 20220426
 #---------------------------------------------------------------------------------------------------
 library(forestTrends)
@@ -243,6 +243,8 @@ head(results_tally)
 
 #results_comb$park_order <- reorder(results_comb$park, results_comb$park_reggrp)
 results_final <- results_comb2 %>% arrange(park_ord, metgrp, label_order)
+
+write.csv(results_final, "results/20220325/final_park_results.csv")
 
 results_plot <- 
   ggplot(results_final, aes(x = park_ord, y = label_order))+
