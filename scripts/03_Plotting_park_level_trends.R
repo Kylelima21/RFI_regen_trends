@@ -93,7 +93,7 @@ head(boot_results)
 
 #----- Total plots -----
 # Fake plot to customize trend legend
-sign_color = c("#979797", "#686868", "#6FAB6A", "#BB6363")
+sign_color = c("#979797", "#686868", "forestgreen", "darkorange")
 leg_line <- ggplot(data = data.frame(sign = c("notmod", "nonsign", "signinc", "signdec"),
                                      x = c(1, 2, 3, 4)), 
                    aes(x = x, y = x, color = sign, fill = sign, linetype = sign, shape = sign))+
@@ -157,13 +157,13 @@ walk(park_ls, function(park){
      title = as.character(park_met_list %>% filter(metrics == met_tot_list[met]) %>% 
                           select(metric_names) %>% unique())
      
-     p <- plot_trend_response(df, xlab = "Cycle", ylab = title, model_type = 'lmer') +
+     p <- plot_trend_response(df, xlab = "Cycle", ylab = title, model_type = 'lmer', sign_color = sign_color) +
           scale_x_continuous(breaks = c(1, 2, 3), labels = c("1", "2", "3"))
   
      }) %>% set_names(met_tot_list) # map
    
-  svg(paste0("./results/20220325/park_plots/total/", parkcode, "_Total_metrics", ".svg"),
-      height = 3, width = 12)
+  png(paste0("./results/20220325/park_plots/total/", parkcode, "_Total_metrics", ".png"),
+      width = 12, height = 3.3, units = "in", res = 600)
 
      grid.arrange(grobs = list(plots[[1]], plots[[2]], plots[[3]], plots[[4]], plots[[5]], leg_gline),
                heights = c(4.85, 0.2, 0.4, 0.2),
@@ -258,8 +258,8 @@ plot_park_by_grp <- function(df, xlab, ylab, parkcode, var){
     geom_line(aes(y = estimate, x = time, colour = sppgrp, linetype = sign), na.rm = TRUE)+
     scale_linetype_manual(values = c('notmod' = 'dotted', 'nonsign' = 'dashed', 
                                      'sign' = 'solid'))+
-    scale_color_manual(values = c("NatCan" = "#2BA12E", "NatOth" = "#B9B9B9", "Exotic" = "#CD5C5C"))+
-    scale_fill_manual(values = c("NatCan" = "#2BA12E", "NatOth" = "#B9B9B9", "Exotic" = "#CD5C5C"))+
+    scale_color_manual(values = c("NatCan" = "forestgreen", "NatOth" = "#B9B9B9", "Exotic" = "darkorange"))+
+    scale_fill_manual(values = c("NatCan" = "forestgreen", "NatOth" = "#B9B9B9", "Exotic" = "darkorange"))+
     scale_shape_manual(values = c("NatCan" = 24, "NatOth" = 21, "Exotic" = 25))+
     theme_bw()+
     theme(axis.text = element_text(size = 11), 
@@ -302,11 +302,11 @@ leg_linesp <- ggplot(data = data.frame(spgrp = c("Exotic", "NatCan", "NatOth"),
                      aes(x = x, y = x, color = spgrp, fill = spgrp, shape = spgrp))+
   theme_bw()+ geom_line(size = 0.5)+  
   geom_point(size = 1.5)+
-  scale_fill_manual(values = c("NatCan" = "#2BA12E", "NatOth" = "#B9B9B9", "Exotic" = "#CD5C5C"), 
+  scale_fill_manual(values = c("NatCan" = "forestgreen", "NatOth" = "#B9B9B9", "Exotic" = "darkorange"), 
                     labels = c("Native Canopy", "Native Other", "Exotic"),
                     name = "Groups:",
                     drop = FALSE)+
-  scale_color_manual(values = c("NatCan" = "#2BA12E", "NatOth" = "#B9B9B9", "Exotic" = "#CD5C5C"), 
+  scale_color_manual(values = c("NatCan" = "forestgreen", "NatOth" = "#B9B9B9", "Exotic" = "darkorange"), 
                      labels = c("Native Canopy", "Native Other", "Exotic"),
                      name = "Groups:",
                      drop = FALSE)+
@@ -347,8 +347,8 @@ walk(park_ls, function(park){
     
   }) %>% set_names(met_spp) # map
   
-  svg(paste0("./results/20220325/park_plots/spp_grp/", parkcode, "_spp_grp", ".svg"),
-      height = 3, width = 12)
+  png(paste0("./results/20220325/park_plots/spp_grp/", parkcode, "_spp_grp", ".png"),
+      width = 12, height = 3.3, units = "in", res = 600)
 
   grid.arrange(grobs = list(plots[[1]], plots[[2]], plots[[3]], plots[[4]], plots[[5]],
                             leg_gline2, leg_glinesp),
@@ -399,8 +399,8 @@ walk(park_ls, function(park){
                                        "70 \U2013 79.9cm", "80 \U2013 89.9cm", "90 \U2013 99.9cm", "100+cm"))+
          labs(x = "DBH size classes", y = "Tree Density (stems/ha)")
   
-  svg(paste0("./results/20220325/park_plots/tree_sizes/", parkcode, "_diam_dist", ".svg"),
-      height = 6, width = 8)
+  png(paste0("./results/20220325/park_plots/tree_sizes/", parkcode, "_diam_dist", ".png"),
+      height = 6, width = 8, units = "in", res = 600)
 
   print(p)
 
@@ -411,7 +411,7 @@ walk(park_ls, function(park){
 
 #----- Tree size classes (10-40) -----
 # Fake plot to customize trend legend
-sign_color = c("#979797", "#686868", "#6FAB6A", "#BB6363")
+sign_color = c("#979797", "#686868", "forestgreen", "darkorange")
 leg_line <- ggplot(data = data.frame(sign = c("notmod", "nonsign", "signinc", "signdec"),
                                      x = c(1, 2, 3, 4)), 
                    aes(x = x, y = x, color = sign, fill = sign, linetype = sign, shape = sign))+
@@ -477,14 +477,14 @@ walk(park_ls, function(park){
     title = as.character(park_met_list %>% filter(metrics == met_size_list[met]) %>% 
                            select(metric_names) %>% unique())
     
-    p <- plot_trend_response(df, xlab = "Cycle", ylab = title, model_type = 'lmer') +
+    p <- plot_trend_response(df, xlab = "Cycle", ylab = title, model_type = 'lmer', sign_color = sign_color) +
          scale_x_continuous(breaks = c(1, 2, 3), labels = c("1", "2", "3"))+
          ylim(0, ymax)
 
   }) %>% set_names(met_size_list) # map
   
-  svg(paste0("./results/20220325/park_plots/tree_sizes/", parkcode, "_size_metrics", ".svg"),
-      height = 6, width = 10)
+  png(paste0("./results/20220325/park_plots/tree_sizes/", parkcode, "_size_metrics", ".png"),
+      height = 6, width = 10, units = "in", res = 600)
   
   grid.arrange(grobs = list(t10, t20, t30, t40,
                             plots[[1]], plots[[2]], plots[[3]], plots[[4]],
@@ -526,13 +526,13 @@ walk(park_ls, function(park){
     title = as.character(park_met_list %>% filter(metrics == met_sim_list[met]) %>% 
                            select(metric_names) %>% unique())
     
-    p <- plot_trend_response(df, xlab = "Cycle", ylab = title, model_type = 'lmer') +
+    p <- plot_trend_response(df, xlab = "Cycle", ylab = title, model_type = 'lmer', sign_color = sign_color) +
       scale_x_continuous(breaks = c(1, 2, 3), labels = c("1", "2", "3"))+ ylim(0,1)
     
   }) %>% set_names(met_sim_list) # map
   
-  svg(paste0("./results/20220325/park_plots/sim/", parkcode, "_sim", ".svg"),
-      height = 3, width = 10)
+  png(paste0("./results/20220325/park_plots/sim/", parkcode, "_sim", ".png"),
+      height = 3, width = 10, units = "in", res = 600)
   
   grid.arrange(grobs = list(plots[[1]], plots[[2]], plots[[3]], plots[[4]],
                             leg_gline),
@@ -582,8 +582,8 @@ walk(park_ls, function(park){
           legend.position = 'bottom') + 
     labs(x = "Cycle", y = "Proportion of Plots")#+
   
-  svg(paste0("./results/20220325/park_plots/indices/", parkcode, "_dbi", ".svg"),
-      height = 6, width = 8)
+  png(paste0("./results/20220325/park_plots/indices/", parkcode, "_dbi", ".png"),
+      height = 6, width = 8, units = "in", res = 600)
   
   print(dbi_bar)
   
@@ -598,15 +598,15 @@ walk(park_ls, function(park){
 
   df_park <- boot_results %>% filter(park == parkcode) %>% filter(resp == "stock_final") 
 
-  p <- plot_trend_response(df_park, xlab = "Cycle", ylab = "Stocking Index", model_type = 'lmer') +
+  p <- plot_trend_response(df_park, xlab = "Cycle", ylab = "Stocking Index", model_type = 'lmer', sign_color = sign_color) +
        scale_x_continuous(breaks = c(1, 2, 3), labels = c("1", "2", "3"))#+
        # geom_hline(yintercept = 25, linetype = 2, lwd = 0.8, color = 'dimgrey')+
        # geom_text(x = 3.2, y = 22.5, label = "Severely Understocked", hjust = 1, size = 3.5, color = 'dimgrey')+
        # geom_hline(yintercept = 100, linetype = 4, lwd = 0.8, color = "dimgrey")+
        # geom_text(x = 3.2, y = 104, hjust = 1, label = "Sufficiently Stocked", size = 3.5, color = 'dimgrey')
   
-  svg(paste0("./results/20220325/park_plots/indices/", parkcode, "_stock_noline", ".svg"),
-      height = 6, width = 8)
+  png(paste0("./results/20220325/park_plots/indices/", parkcode, "_stock_noline", ".png"),
+      height = 6, width = 8, units = "in", res = 600)
 
   grid.arrange(grobs = list(p, leg_gline),
                heights = c(4.85, 0.1, 0.25, 0.1),

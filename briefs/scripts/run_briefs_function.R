@@ -1,4 +1,5 @@
 library(purrr)
+library(tidyverse)
 
 #' Function to create briefs for all 39 eastern national parks of interest.
 #'
