@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.17)  30 JUL 2022 10:34
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.17)  30 JUL 2022 17:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -871,7 +871,7 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 <inputs/NPS_logo.png, id=7, 2007.5pt x 2613.765pt>
 File: inputs/NPS_logo.png Graphic file (type png)
 <use inputs/NPS_logo.png>
-Package pdftex.def Info: inputs/NPS_logo.png  used on input line 161.
+Package pdftex.def Info: inputs/NPS_logo.png  used on input line 168.
 (pdftex.def)             Requested size: 52.71758pt x 68.63828pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -888,7 +888,7 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 <../rmd/map_of_parks.png, id=30, 628.5081pt x 416.9979pt>
 File: ../rmd/map_of_parks.png Graphic file (type png)
 <use ../rmd/map_of_parks.png>
-Package pdftex.def Info: ../rmd/map_of_parks.png  used on input line 165.
+Package pdftex.def Info: ../rmd/map_of_parks.png  used on input line 172.
 (pdftex.def)             Requested size: 375.8035pt x 249.33531pt.
 <../results/20220325/park_plots/total/ACAD_Total_metrics.png, id=31, 7227.0pt x
  1987.425pt>
@@ -896,7 +896,7 @@ File: ../results/20220325/park_plots/total/ACAD_Total_metrics.png Graphic file
 (type png)
 <use ../results/20220325/park_plots/total/ACAD_Total_metrics.png>
 Package pdftex.def Info: ../results/20220325/park_plots/total/ACAD_Total_metric
-s.png  used on input line 174.
+s.png  used on input line 181.
 (pdftex.def)             Requested size: 469.66122pt x 129.15683pt.
 <../results/20220325/park_plots/spp_grp/ACAD_spp_grp.png, id=32, 7227.0pt x 198
 7.425pt>
@@ -904,7 +904,7 @@ File: ../results/20220325/park_plots/spp_grp/ACAD_spp_grp.png Graphic file (typ
 e png)
 <use ../results/20220325/park_plots/spp_grp/ACAD_spp_grp.png>
 Package pdftex.def Info: ../results/20220325/park_plots/spp_grp/ACAD_spp_grp.pn
-g  used on input line 183.
+g  used on input line 190.
 (pdftex.def)             Requested size: 469.66122pt x 129.15683pt.
 <../results/20220325/park_plots/indices/ACAD_stock_noline.png, id=33, 4818.0pt 
 x 3613.5pt>
@@ -912,7 +912,7 @@ File: ../results/20220325/park_plots/indices/ACAD_stock_noline.png Graphic file
  (type png)
 <use ../results/20220325/park_plots/indices/ACAD_stock_noline.png>
 Package pdftex.def Info: ../results/20220325/park_plots/indices/ACAD_stock_noli
-ne.png  used on input line 192.
+ne.png  used on input line 199.
 (pdftex.def)             Requested size: 469.69798pt x 352.27348pt.
 <../results/20220325/park_plots/tree_sizes/ACAD_size_metrics.png, id=34, 6022.5
 pt x 3613.5pt>
@@ -920,7 +920,7 @@ File: ../results/20220325/park_plots/tree_sizes/ACAD_size_metrics.png Graphic f
 ile (type png)
 <use ../results/20220325/park_plots/tree_sizes/ACAD_size_metrics.png>
 Package pdftex.def Info: ../results/20220325/park_plots/tree_sizes/ACAD_size_me
-trics.png  used on input line 201.
+trics.png  used on input line 208.
 (pdftex.def)             Requested size: 469.6796pt x 281.80775pt.
 <../results/20220325/park_plots/tree_sizes/ACAD_diam_dist.png, id=35, 4818.0pt 
 x 3613.5pt>
@@ -928,14 +928,14 @@ File: ../results/20220325/park_plots/tree_sizes/ACAD_diam_dist.png Graphic file
  (type png)
 <use ../results/20220325/park_plots/tree_sizes/ACAD_diam_dist.png>
 Package pdftex.def Info: ../results/20220325/park_plots/tree_sizes/ACAD_diam_di
-st.png  used on input line 210.
+st.png  used on input line 217.
 (pdftex.def)             Requested size: 469.69798pt x 352.27348pt.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 222.
+(Font)              <9> on input line 229.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 222.
+(Font)              <5> on input line 229.
 
-Overfull \hbox (2.12868pt too wide) in paragraph at lines 222--246
+Overfull \hbox (2.12868pt too wide) in paragraph at lines 229--253
  [][] 
  []
 
@@ -949,12 +949,12 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 File: inputs/NPS_logo.png Graphic file (type png)
 <use inputs/NPS_logo.png>
-Package pdftex.def Info: inputs/NPS_logo.png  used on input line 248.
+Package pdftex.def Info: inputs/NPS_logo.png  used on input line 255.
 (pdftex.def)             Requested size: 26.0984pt x 33.98013pt.
 <inputs/Schoodic_Stacked.jpeg, id=37, 436.63126pt x 424.58624pt>
 File: inputs/Schoodic_Stacked.jpeg Graphic file (type jpg)
 <use inputs/Schoodic_Stacked.jpeg>
-Package pdftex.def Info: inputs/Schoodic_Stacked.jpeg  used on input line 248.
+Package pdftex.def Info: inputs/Schoodic_Stacked.jpeg  used on input line 255.
 (pdftex.def)             Requested size: 34.96452pt x 33.99998pt.
 
 Package fancyhdr Warning: \footskip is too small (34.0pt): 
@@ -964,7 +964,7 @@ Package fancyhdr Warning: \footskip is too small (34.0pt):
 <inputs/background2.jpg, id=39, 4015.0pt x 1364.09625pt>
 File: inputs/background2.jpg Graphic file (type jpg)
 <use inputs/background2.jpg>
-Package pdftex.def Info: inputs/background2.jpg  used on input line 248.
+Package pdftex.def Info: inputs/background2.jpg  used on input line 255.
 (pdftex.def)             Requested size: 614.29301pt x 208.70604pt.
 [2
 
@@ -980,11 +980,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 File: inputs/NPS_logo.png Graphic file (type png)
 <use inputs/NPS_logo.png>
-Package pdftex.def Info: inputs/NPS_logo.png  used on input line 248.
+Package pdftex.def Info: inputs/NPS_logo.png  used on input line 255.
 (pdftex.def)             Requested size: 26.0984pt x 33.98013pt.
 File: inputs/Schoodic_Stacked.jpeg Graphic file (type jpg)
 <use inputs/Schoodic_Stacked.jpeg>
-Package pdftex.def Info: inputs/Schoodic_Stacked.jpeg  used on input line 248.
+Package pdftex.def Info: inputs/Schoodic_Stacked.jpeg  used on input line 255.
 (pdftex.def)             Requested size: 34.96452pt x 33.99998pt.
 
 Package fancyhdr Warning: \footskip is too small (34.0pt): 
@@ -993,7 +993,7 @@ Package fancyhdr Warning: \footskip is too small (34.0pt):
 
 File: inputs/background2.jpg Graphic file (type jpg)
 <use inputs/background2.jpg>
-Package pdftex.def Info: inputs/background2.jpg  used on input line 248.
+Package pdftex.def Info: inputs/background2.jpg  used on input line 255.
 (pdftex.def)             Requested size: 614.29301pt x 208.70604pt.
 [3 <../results/20220325/park_plots/spp_grp/ACAD_spp_grp.png> <../results/202203
 25/park_plots/indices/ACAD_stock_noline.png>]
@@ -1007,11 +1007,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 File: inputs/NPS_logo.png Graphic file (type png)
 <use inputs/NPS_logo.png>
-Package pdftex.def Info: inputs/NPS_logo.png  used on input line 248.
+Package pdftex.def Info: inputs/NPS_logo.png  used on input line 255.
 (pdftex.def)             Requested size: 26.0984pt x 33.98013pt.
 File: inputs/Schoodic_Stacked.jpeg Graphic file (type jpg)
 <use inputs/Schoodic_Stacked.jpeg>
-Package pdftex.def Info: inputs/Schoodic_Stacked.jpeg  used on input line 248.
+Package pdftex.def Info: inputs/Schoodic_Stacked.jpeg  used on input line 255.
 (pdftex.def)             Requested size: 34.96452pt x 33.99998pt.
 
 Package fancyhdr Warning: \footskip is too small (34.0pt): 
@@ -1020,7 +1020,7 @@ Package fancyhdr Warning: \footskip is too small (34.0pt):
 
 File: inputs/background2.jpg Graphic file (type jpg)
 <use inputs/background2.jpg>
-Package pdftex.def Info: inputs/background2.jpg  used on input line 248.
+Package pdftex.def Info: inputs/background2.jpg  used on input line 255.
 (pdftex.def)             Requested size: 614.29301pt x 208.70604pt.
 [4 <../results/20220325/park_plots/tree_sizes/ACAD_size_metrics.png>]
 
@@ -1033,11 +1033,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 File: inputs/NPS_logo.png Graphic file (type png)
 <use inputs/NPS_logo.png>
-Package pdftex.def Info: inputs/NPS_logo.png  used on input line 248.
+Package pdftex.def Info: inputs/NPS_logo.png  used on input line 255.
 (pdftex.def)             Requested size: 26.0984pt x 33.98013pt.
 File: inputs/Schoodic_Stacked.jpeg Graphic file (type jpg)
 <use inputs/Schoodic_Stacked.jpeg>
-Package pdftex.def Info: inputs/Schoodic_Stacked.jpeg  used on input line 248.
+Package pdftex.def Info: inputs/Schoodic_Stacked.jpeg  used on input line 255.
 (pdftex.def)             Requested size: 34.96452pt x 33.99998pt.
 
 Package fancyhdr Warning: \footskip is too small (34.0pt): 
@@ -1046,16 +1046,16 @@ Package fancyhdr Warning: \footskip is too small (34.0pt):
 
 File: inputs/background2.jpg Graphic file (type jpg)
 <use inputs/background2.jpg>
-Package pdftex.def Info: inputs/background2.jpg  used on input line 248.
+Package pdftex.def Info: inputs/background2.jpg  used on input line 255.
 (pdftex.def)             Requested size: 614.29301pt x 208.70604pt.
 [5 <../results/20220325/park_plots/tree_sizes/ACAD_diam_dist.png>] (./ACAD_fore
 st_brief.aux) ) 
 Here is how much of TeX's memory you used:
- 25434 strings out of 478268
- 474613 string characters out of 5846347
- 773227 words of memory out of 5000000
+ 25436 strings out of 478268
+ 474633 string characters out of 5846347
+ 775232 words of memory out of 5000000
  43060 multiletter control sequences out of 15000+600000
- 520492 words of font info for 107 fonts, out of 8000000 for 9000
+ 520575 words of font info for 108 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,14n,117p,1022b,765s stack positions out of 10000i,1000n,20000p,200000b,200000s
 {/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc
@@ -1064,7 +1064,7 @@ al/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive
 /2022/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2022/texmf
 -dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/
 type1/public/lm/lmr9.pfb>
-Output written on ACAD_forest_brief.pdf (5 pages, 4307648 bytes).
+Output written on ACAD_forest_brief.pdf (5 pages, 4308452 bytes).
 PDF statistics:
  119 PDF objects out of 1000 (max. 8388607)
  86 compressed objects within 1 object stream
