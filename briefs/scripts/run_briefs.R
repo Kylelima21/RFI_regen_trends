@@ -13,4 +13,4 @@ park_names <- read.csv("./data/park_names.csv") %>%
 
 # Create briefs
 run_briefs(park_names)
-
+ 

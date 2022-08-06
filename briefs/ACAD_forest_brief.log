@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.17)  30 JUL 2022 17:26
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.17)  6 AUG 2022 17:47
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -702,50 +702,57 @@ Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
 \@thisruleclass=\count318
 \@lastruleclass=\count319
 \@thisrulewidth=\dimen290
+) (/usr/local/texlive/2022/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count320
+\float@exts=\toks42
+\float@box=\box71
+\@float@everytoks=\toks43
+\@floatcapt=\box72
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2020-11-06 v1.29 PDF bookmarks (HO)
 (/usr/local/texlive/2022/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 File: bkm-pdftex.def 2020-11-06 v1.29 bookmark driver for pdfTeX (HO)
-\BKM@id=\count320
+\BKM@id=\count321
 )) (/usr/local/texlive/2022/texmf-dist/tex/latex/xurl/xurl.sty
 Package: xurl 2022/01/09 v 0.10 modify URL breaks
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2022-02-07 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count321
-\l__pdf_internal_box=\box71
+\l__color_backend_stack_int=\count322
+\l__pdf_internal_box=\box73
 ) (./ACAD_forest_brief.aux)
 \openout1 = `ACAD_forest_brief.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 95.
-LaTeX Font Info:    ... okay on input line 95.
-LaTeX Info: Redefining \microtypecontext on input line 95.
-Package microtype Info: Applying patch `item' on input line 95.
-Package microtype Info: Applying patch `toc' on input line 95.
-Package microtype Info: Applying patch `eqnum' on input line 95.
-Package microtype Info: Applying patch `footnote' on input line 95.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 96.
+LaTeX Font Info:    ... okay on input line 96.
+LaTeX Info: Redefining \microtypecontext on input line 96.
+Package microtype Info: Applying patch `item' on input line 96.
+Package microtype Info: Applying patch `toc' on input line 96.
+Package microtype Info: Applying patch `eqnum' on input line 96.
+Package microtype Info: Applying patch `footnote' on input line 96.
 Package microtype Info: Generating PDF output.
 Package microtype Info: Character protrusion enabled (level 2).
 Package microtype Info: Using protrusion set `basicmath'.
 Package microtype Info: Automatic font expansion enabled (level 2),
 (microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
 Package microtype Info: Using default expansion set `alltext-nott'.
-LaTeX Info: Redefining \showhyphens on input line 95.
+LaTeX Info: Redefining \showhyphens on input line 96.
 Package microtype Info: No adjustment of tracking.
 Package microtype Info: No adjustment of interword spacing.
 Package microtype Info: No adjustment of character kerning.
@@ -754,17 +761,17 @@ File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman
 (RS)
 ) (/usr/local/texlive/2022/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count322
+\scratchcounter=\count323
 \scratchdimen=\dimen291
-\scratchbox=\box72
-\nofMPsegments=\count323
-\nofMParguments=\count324
-\everyMPshowfont=\toks42
-\MPscratchCnt=\count325
+\scratchbox=\box74
+\nofMPsegments=\count324
+\nofMParguments=\count325
+\everyMPshowfont=\toks44
+\MPscratchCnt=\count326
 \MPscratchDim=\dimen292
-\MPnumerator=\count326
-\makeMPintoPDFobject=\count327
-\everyMPtoPDFconversion=\toks43
+\MPnumerator=\count327
+\makeMPintoPDFobject=\count328
+\everyMPtoPDFconversion=\toks45
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -807,7 +814,7 @@ e
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
-Package hyperref Info: Link coloring OFF on input line 95.
+Package hyperref Info: Link coloring OFF on input line 96.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2021-04-02 v2.47 Cross-referencing by name of section
 (/usr/local/texlive/2022/texmf-dist/tex/latex/refcount/refcount.sty
@@ -817,51 +824,52 @@ Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
 ty
 Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
 )
-\c@section@level=\count328
+\c@section@level=\count329
 )
-LaTeX Info: Redefining \ref on input line 95.
-LaTeX Info: Redefining \pageref on input line 95.
-LaTeX Info: Redefining \nameref on input line 95.
+LaTeX Info: Redefining \ref on input line 96.
+LaTeX Info: Redefining \pageref on input line 96.
+LaTeX Info: Redefining \nameref on input line 96.
 Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: float package is loaded.
 Package caption Info: longtable package is loaded.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/caption/ltcaption.sty
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 9
-7.
+8.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 9
-7.
+8.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-97.
+98.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-97.
+98.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 97.
+(Font)              <12> on input line 98.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 97.
+(Font)              <8> on input line 98.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 97.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 97.
+(Font)              <6> on input line 98.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 98.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 97.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 98.
 
 (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -871,7 +879,7 @@ File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 <inputs/NPS_logo.png, id=7, 2007.5pt x 2613.765pt>
 File: inputs/NPS_logo.png Graphic file (type png)
 <use inputs/NPS_logo.png>
-Package pdftex.def Info: inputs/NPS_logo.png  used on input line 168.
+Package pdftex.def Info: inputs/NPS_logo.png  used on input line 177.
 (pdftex.def)             Requested size: 52.71758pt x 68.63828pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -885,57 +893,80 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 
  <./inputs/NPS_logo.png>]
-<../rmd/map_of_parks.png, id=30, 628.5081pt x 416.9979pt>
-File: ../rmd/map_of_parks.png Graphic file (type png)
-<use ../rmd/map_of_parks.png>
-Package pdftex.def Info: ../rmd/map_of_parks.png  used on input line 172.
-(pdftex.def)             Requested size: 375.8035pt x 249.33531pt.
-<../results/20220325/park_plots/total/ACAD_Total_metrics.png, id=31, 7227.0pt x
+<inputs/Region1_manuscript.jpg, id=32, 794.97pt x 614.295pt>
+File: inputs/Region1_manuscript.jpg Graphic file (type jpg)
+<use inputs/Region1_manuscript.jpg>
+Package pdftex.def Info: inputs/Region1_manuscript.jpg  used on input line 181.
+
+(pdftex.def)             Requested size: 375.8194pt x 290.40588pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 188--190
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 188--190
+
+ []
+
+<../results/20220325/park_plots/total/ACAD_Total_metrics.png, id=33, 7227.0pt x
  1987.425pt>
 File: ../results/20220325/park_plots/total/ACAD_Total_metrics.png Graphic file 
 (type png)
 <use ../results/20220325/park_plots/total/ACAD_Total_metrics.png>
 Package pdftex.def Info: ../results/20220325/park_plots/total/ACAD_Total_metric
-s.png  used on input line 181.
+s.png  used on input line 193.
 (pdftex.def)             Requested size: 469.66122pt x 129.15683pt.
-<../results/20220325/park_plots/spp_grp/ACAD_spp_grp.png, id=32, 7227.0pt x 198
+<../results/20220325/park_plots/spp_grp/ACAD_spp_grp.png, id=34, 7227.0pt x 198
 7.425pt>
 File: ../results/20220325/park_plots/spp_grp/ACAD_spp_grp.png Graphic file (typ
 e png)
 <use ../results/20220325/park_plots/spp_grp/ACAD_spp_grp.png>
 Package pdftex.def Info: ../results/20220325/park_plots/spp_grp/ACAD_spp_grp.pn
-g  used on input line 190.
+g  used on input line 202.
 (pdftex.def)             Requested size: 469.66122pt x 129.15683pt.
-<../results/20220325/park_plots/indices/ACAD_stock_noline.png, id=33, 4818.0pt 
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<../results/20220325/park_plots/indices/ACAD_stock_noline.png, id=35, 4818.0pt 
 x 3613.5pt>
 File: ../results/20220325/park_plots/indices/ACAD_stock_noline.png Graphic file
  (type png)
 <use ../results/20220325/park_plots/indices/ACAD_stock_noline.png>
 Package pdftex.def Info: ../results/20220325/park_plots/indices/ACAD_stock_noli
-ne.png  used on input line 199.
-(pdftex.def)             Requested size: 469.69798pt x 352.27348pt.
-<../results/20220325/park_plots/tree_sizes/ACAD_size_metrics.png, id=34, 6022.5
+ne.png  used on input line 210.
+(pdftex.def)             Requested size: 375.74368pt x 281.80775pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<../results/20220325/park_plots/tree_sizes/ACAD_size_metrics.png, id=36, 6022.5
 pt x 3613.5pt>
 File: ../results/20220325/park_plots/tree_sizes/ACAD_size_metrics.png Graphic f
 ile (type png)
 <use ../results/20220325/park_plots/tree_sizes/ACAD_size_metrics.png>
 Package pdftex.def Info: ../results/20220325/park_plots/tree_sizes/ACAD_size_me
-trics.png  used on input line 208.
-(pdftex.def)             Requested size: 469.6796pt x 281.80775pt.
-<../results/20220325/park_plots/tree_sizes/ACAD_diam_dist.png, id=35, 4818.0pt 
+trics.png  used on input line 219.
+(pdftex.def)             Requested size: 375.76205pt x 225.45723pt.
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+<../results/20220325/park_plots/tree_sizes/ACAD_diam_dist.png, id=37, 4818.0pt 
 x 3613.5pt>
 File: ../results/20220325/park_plots/tree_sizes/ACAD_diam_dist.png Graphic file
  (type png)
 <use ../results/20220325/park_plots/tree_sizes/ACAD_diam_dist.png>
 Package pdftex.def Info: ../results/20220325/park_plots/tree_sizes/ACAD_diam_di
-st.png  used on input line 217.
-(pdftex.def)             Requested size: 469.69798pt x 352.27348pt.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 229.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 229.
+st.png  used on input line 228.
+(pdftex.def)             Requested size: 328.76653pt x 246.57489pt.
 
-Overfull \hbox (2.12868pt too wide) in paragraph at lines 229--253
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 240.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 240.
+
+Overfull \hbox (2.12868pt too wide) in paragraph at lines 240--264
  [][] 
  []
 
@@ -949,27 +980,27 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 File: inputs/NPS_logo.png Graphic file (type png)
 <use inputs/NPS_logo.png>
-Package pdftex.def Info: inputs/NPS_logo.png  used on input line 255.
+Package pdftex.def Info: inputs/NPS_logo.png  used on input line 266.
 (pdftex.def)             Requested size: 26.0984pt x 33.98013pt.
-<inputs/Schoodic_Stacked.jpeg, id=37, 436.63126pt x 424.58624pt>
+<inputs/Schoodic_Stacked.jpeg, id=39, 436.63126pt x 424.58624pt>
 File: inputs/Schoodic_Stacked.jpeg Graphic file (type jpg)
 <use inputs/Schoodic_Stacked.jpeg>
-Package pdftex.def Info: inputs/Schoodic_Stacked.jpeg  used on input line 255.
+Package pdftex.def Info: inputs/Schoodic_Stacked.jpeg  used on input line 266.
 (pdftex.def)             Requested size: 34.96452pt x 33.99998pt.
 
 Package fancyhdr Warning: \footskip is too small (34.0pt): 
 (fancyhdr)                Make it at least 38.08002pt, for example:
 (fancyhdr)                \setlength{\footskip}{38.08002pt}.
 
-<inputs/background2.jpg, id=39, 4015.0pt x 1364.09625pt>
+<inputs/background2.jpg, id=41, 4015.0pt x 1364.09625pt>
 File: inputs/background2.jpg Graphic file (type jpg)
 <use inputs/background2.jpg>
-Package pdftex.def Info: inputs/background2.jpg  used on input line 255.
+Package pdftex.def Info: inputs/background2.jpg  used on input line 266.
 (pdftex.def)             Requested size: 614.29301pt x 208.70604pt.
 [2
 
- <./inputs/background2.jpg> <../rmd/map_of_parks.png> <../results/20220325/park
-_plots/total/ACAD_Total_metrics.png> <./inputs/Schoodic_Stacked.jpeg>]
+ <./inputs/background2.jpg> <./inputs/Region1_manuscript.jpg> <../results/20220
+325/park_plots/total/ACAD_Total_metrics.png> <./inputs/Schoodic_Stacked.jpeg>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -980,11 +1011,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 File: inputs/NPS_logo.png Graphic file (type png)
 <use inputs/NPS_logo.png>
-Package pdftex.def Info: inputs/NPS_logo.png  used on input line 255.
+Package pdftex.def Info: inputs/NPS_logo.png  used on input line 266.
 (pdftex.def)             Requested size: 26.0984pt x 33.98013pt.
 File: inputs/Schoodic_Stacked.jpeg Graphic file (type jpg)
 <use inputs/Schoodic_Stacked.jpeg>
-Package pdftex.def Info: inputs/Schoodic_Stacked.jpeg  used on input line 255.
+Package pdftex.def Info: inputs/Schoodic_Stacked.jpeg  used on input line 266.
 (pdftex.def)             Requested size: 34.96452pt x 33.99998pt.
 
 Package fancyhdr Warning: \footskip is too small (34.0pt): 
@@ -993,7 +1024,7 @@ Package fancyhdr Warning: \footskip is too small (34.0pt):
 
 File: inputs/background2.jpg Graphic file (type jpg)
 <use inputs/background2.jpg>
-Package pdftex.def Info: inputs/background2.jpg  used on input line 255.
+Package pdftex.def Info: inputs/background2.jpg  used on input line 266.
 (pdftex.def)             Requested size: 614.29301pt x 208.70604pt.
 [3 <../results/20220325/park_plots/spp_grp/ACAD_spp_grp.png> <../results/202203
 25/park_plots/indices/ACAD_stock_noline.png>]
@@ -1007,11 +1038,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 File: inputs/NPS_logo.png Graphic file (type png)
 <use inputs/NPS_logo.png>
-Package pdftex.def Info: inputs/NPS_logo.png  used on input line 255.
+Package pdftex.def Info: inputs/NPS_logo.png  used on input line 266.
 (pdftex.def)             Requested size: 26.0984pt x 33.98013pt.
 File: inputs/Schoodic_Stacked.jpeg Graphic file (type jpg)
 <use inputs/Schoodic_Stacked.jpeg>
-Package pdftex.def Info: inputs/Schoodic_Stacked.jpeg  used on input line 255.
+Package pdftex.def Info: inputs/Schoodic_Stacked.jpeg  used on input line 266.
 (pdftex.def)             Requested size: 34.96452pt x 33.99998pt.
 
 Package fancyhdr Warning: \footskip is too small (34.0pt): 
@@ -1020,9 +1051,10 @@ Package fancyhdr Warning: \footskip is too small (34.0pt):
 
 File: inputs/background2.jpg Graphic file (type jpg)
 <use inputs/background2.jpg>
-Package pdftex.def Info: inputs/background2.jpg  used on input line 255.
+Package pdftex.def Info: inputs/background2.jpg  used on input line 266.
 (pdftex.def)             Requested size: 614.29301pt x 208.70604pt.
-[4 <../results/20220325/park_plots/tree_sizes/ACAD_size_metrics.png>]
+[4 <../results/20220325/park_plots/tree_sizes/ACAD_size_metrics.png> <../result
+s/20220325/park_plots/tree_sizes/ACAD_diam_dist.png>]
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
 (fancyhdr)                Make it at least 13.59999pt, for example:
@@ -1033,11 +1065,11 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 File: inputs/NPS_logo.png Graphic file (type png)
 <use inputs/NPS_logo.png>
-Package pdftex.def Info: inputs/NPS_logo.png  used on input line 255.
+Package pdftex.def Info: inputs/NPS_logo.png  used on input line 266.
 (pdftex.def)             Requested size: 26.0984pt x 33.98013pt.
 File: inputs/Schoodic_Stacked.jpeg Graphic file (type jpg)
 <use inputs/Schoodic_Stacked.jpeg>
-Package pdftex.def Info: inputs/Schoodic_Stacked.jpeg  used on input line 255.
+Package pdftex.def Info: inputs/Schoodic_Stacked.jpeg  used on input line 266.
 (pdftex.def)             Requested size: 34.96452pt x 33.99998pt.
 
 Package fancyhdr Warning: \footskip is too small (34.0pt): 
@@ -1046,28 +1078,27 @@ Package fancyhdr Warning: \footskip is too small (34.0pt):
 
 File: inputs/background2.jpg Graphic file (type jpg)
 <use inputs/background2.jpg>
-Package pdftex.def Info: inputs/background2.jpg  used on input line 255.
+Package pdftex.def Info: inputs/background2.jpg  used on input line 266.
 (pdftex.def)             Requested size: 614.29301pt x 208.70604pt.
-[5 <../results/20220325/park_plots/tree_sizes/ACAD_diam_dist.png>] (./ACAD_fore
-st_brief.aux) ) 
+[5] (./ACAD_forest_brief.aux) ) 
 Here is how much of TeX's memory you used:
- 25436 strings out of 478268
- 474633 string characters out of 5846347
- 775232 words of memory out of 5000000
- 43060 multiletter control sequences out of 15000+600000
+ 25505 strings out of 478268
+ 475910 string characters out of 5846347
+ 777621 words of memory out of 5000000
+ 43124 multiletter control sequences out of 15000+600000
  520575 words of font info for 108 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 99i,14n,117p,1022b,765s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc
-}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/loc
-al/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/local/texlive
-/2022/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/texlive/2022/texmf
--dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2022/texmf-dist/fonts/
-type1/public/lm/lmr9.pfb>
-Output written on ACAD_forest_brief.pdf (5 pages, 4308452 bytes).
+ 99i,14n,117p,1022b,763s stack positions out of 10000i,1000n,20000p,200000b,200000s
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dv
+ips/lm/lm-ec.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx
+10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></u
+sr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/local/te
+xlive/2022/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/local/texlive/2022/t
+exmf-dist/fonts/type1/public/lm/lmr9.pfb>
+Output written on ACAD_forest_brief.pdf (5 pages, 13339188 bytes).
 PDF statistics:
- 119 PDF objects out of 1000 (max. 8388607)
- 86 compressed objects within 1 object stream
- 25 named destinations out of 1000 (max. 500000)
- 28762 words of extra memory for PDF output out of 29859 (max. 10000000)
+ 124 PDF objects out of 1000 (max. 8388607)
+ 91 compressed objects within 1 object stream
+ 27 named destinations out of 1000 (max. 500000)
+ 28770 words of extra memory for PDF output out of 29859 (max. 10000000)
 
