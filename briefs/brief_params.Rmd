@@ -1,8 +1,8 @@
 ---
-title: "`r paste(park_name)` Forest Regeneration Brief"
 output: 
   pdf_document:
     highlight: tango
+    keep_tex: no
 sansfont: Times New Roman
 fontsize: 10.9pt
 geometry: margin = 1in
@@ -16,32 +16,39 @@ header-includes:
   - \usepackage{longtable}
   - \usepackage{booktabs}
   - \usepackage{float}
+  - \usepackage{wrapfig}
+  - \usepackage{graphicx}
+  - \usepackage{ragged2e}
   - \captionsetup[figure]{labelformat=empty}
   - \captionsetup[table]{labelformat=empty}
   - \pagestyle{fancy}
   - \fancypagestyle{plain}{\pagestyle{fancy}}
   - \fancyhf{}
-  - \fancyhead[L]{\ifnum\value{page} < 2 {Eastern Forest Working Group\\ Inventory and Monitoring Program\\ \hspace{1cm}\\Forest Health Monitoring} \else {Eastern Forest Working Group}\small \fi}
-  - \chead[C]{\ifnum\value{page} < 2 {\includegraphics[height=.95in,width=.95in]{inputs/NPS_logo.png}} \else \fi}
-  - \fancyhead[R]{\ifnum\value{page} < 2 {National Park Service\\ U.S. Department of the Interior\\ \hspace{1cm}\\ \hspace{1cm}} \else {\today}\small \fi}
+  - \fancyhead[L]{\ifnum\value{page} < 2 {\colorbox{black}{\parbox[b][2.5cm][c]{16.3cm}{\textcolor{white}{Eastern Forest Working Group\\ Inventory and Monitoring Program\\ \hspace{1cm}\\Forest Health Monitoring\\ \hspace{1cm}}}}}\else {Eastern Forest Working Group}\small \fi}
+  - \chead[C]{\ifnum\value{page} < 2 {\textcolor{white}{\hspace{5.7cm}National Park Service\\ \hspace{7.2cm}U.S. Department of the Interior\\ \vspace{1.1cm}}} \else \fi}
+  - \fancyhead[R]{\ifnum\value{page} < 2 {\includegraphics[height=.95in,width=.95in]{inputs/NPS_logo.png}} \else {\today}\small \fi}
   - \setlength{\footskip}{34pt}
   - \fancyfoot[C]{\thepage\footnotesize}
-  - \rfoot{\ifnum\value{page} > 1 {\includegraphics[height=\footskip]{inputs/Schoodic_Stacked.jpeg}}\\ \scriptsize{\href{https://schoodicinstitute.org}{Schoodic Institute at Acadia National Park}} \else \fi}
-  - \lfoot{\ifnum\value{page} > 1 {\includegraphics[height=\footskip]{inputs/NPS_logo.png}}\\ \scriptsize{\href{https://www.nps.gov/index.htm}{National Park Service}} \else \fi}
+  - \rfoot{\ifnum\value{page} > 1 \href{https://schoodicinstitute.org}{\includegraphics[height=\footskip]{inputs/Schoodic_Stacked.jpeg}} \href{https://www.nps.gov/index.htm}{\includegraphics[height=\footskip]{inputs/NPS_logo.png}} \else \fi}
   - \backgroundsetup{scale=1,opacity=0.5,angle=0,placement=bottom,contents={\ifnum\value{page} > 1 {\includegraphics[width=8.5in]{inputs/background2.jpg}} \else \fi}}
   - \pretitle{\begin{center}\LARGE\bfseries\vspace{.5cm}}
   - \posttitle{\end{center}}
   - \setlength{\columnsep}{10pt}
-classoption:
-- twocolumn
 params:
   park: park
 ---
 
+\newenvironment{specwrapfigure}
+ {%
+  \setlength{\columnsep}{15pt}%
+  \wrapfloat{figure}%
+ }
+ {\endwrapfloat}
+ 
+ 
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, fig.pos = "!h")
 ```
-
 
 ```{r imports, include = FALSE, results = 'hide'}
 library(tidyverse)
@@ -64,7 +71,7 @@ park_data <- read.csv("../results/20220325/final_park_results.csv") %>%
          metgrp = str_replace(metgrp, "Regen.", "Regeneration"))
 
 park_table <- read.csv("../results/20220325/final_park_results.csv") %>% 
-  filter(park == "ACAD") %>% #paste(park_info$park)) %>% 
+  filter(park == paste(park_info$park)) %>% 
   mutate(park_reggrp = ifelse(park_reggrp == "Sec.", "Secure", park_reggrp),
          metgrp = str_replace(metgrp, "Regen.", "Regeneration"),
          sign = str_replace(sign, "nonsign", "no supported trend"),
@@ -75,40 +82,35 @@ park_table <- read.csv("../results/20220325/final_park_results.csv") %>%
          sign = str_replace(sign, "signinc_good", "increase"))
 ```
 
+\hfill\break
+\hfill\break
+# `r paste(park_info$park_full)`'s Forests Regeneration Status is `r paste(park_data$park_reggrp)`
 
-### Introduction
-Forests cover tens of thousands of acres in eastern national parks, are fundamental natural and cultural resources, and provide habitat for countless plants, animals, fungi, and insects (see 'Source Publication' for citations). Park forests protect water quality and soil stability, as well as influence our local weather and reduce some gases that contribute to climate change. However, these critical park resources face a range of threats.
- 
-The National Park Service Inventory and Monitoring Program (I&M) is tracking forest health across the park system. Monitoring data indicate significant threats to future sustainability of park forests. Many parks lack the minimum level of seedling and sapling density needed to replace canopy trees as they die, or face threats to tree health. This brief for `r paste(park_info$park_full)` (`r paste(park_info$park)`) is part of a larger effort across 39 parks and four I&M networks to assess forest health and aid parks in managing under continuous change. Here, we focus on tree regeneration and potential threat to future forest health - regeneration debt. When forests lack sufficient regeneration, or the species composition in the regeneration layer does not match the canopy, this is regeneration debt.
+\begin{specwrapfigure}{r}{0.5\textwidth}
+  \centering
+    \includegraphics[width=\linewidth]{inputs/Region1_manuscript.jpg}
+  \caption{Figure 1. Map of parks included in regional regeneration project and forest regeneration status.}
+\end{specwrapfigure}
 
-### Methods
-Field Methods & Study Sites - This study analyzed data from 1515 plots in 39 national parks that have similar methods for long-term forest monitoring (Figure 1). Plots were sampled on a 4-year rotating panel, such that one quarter (i.e., one panel) of the plots is sampled every year, and each plot is sampled every 4 years (i.e., one cycle). The data include XX plots from `r paste(park_info$park)`.
+**Introduction** \hfill\break
+`r paste(park_info$park_full)`'s (`r paste(park_info$park)`) forest regeneration status of `r paste("'", park_data$park_reggrp, "'", sep = "")` means that the park `r ifelse(park_data$park_reggrp == "Imminent Failure", paste("is experiencing severe regeneration failure and is at risk of forest loss. In some cases, this forest loss may already underway"), ifelse(park_data$park_reggrp == "Probable Failure", paste("is experiencing regeneration failure as indicated by lacking and/or declining sapling density, although seedlings are more abundant than in the 'Imminent Failure' category"), ifelse(park_data$park_reggrp == "Insecure", paste("lacks sapling density, but has sufficient and often increasing seedling layers, and overall lower deer browse impacts. Significant trends in the 'Insecure' category tend to be due to forest dynamics (i.e., succession)"), paste("has abundant seedling and sapling layers and show few concerning trends"))))`.
 
-Statistical Analysis - We calculated plot-level metrics of forest structure and diversity to assess status and trends in forest health over the past 12 years (i.e., 3 sampling cycles with cycle 1 covering survey years 2008 - 2011, cycle 2 covering 2012 - 2015, and cycle 3 covering 2016 - 2019). We fit linear mixed effects models and case bootstrapping to generate model coefficients and confidence intervals (see Source Publication for analysis details).
+**Main Findings** \hfill\break
+`r paste(park_info$park_full)` (`r paste(park_info$park)`) is located in the `r ifelse(park_info$Network == "NETN", paste("Northeast Temperate"), ifelse(park_info$Network == "NCRN", paste("National Capital Region"), ifelse(park_info$Network == "NCBN", paste("Northeast Coastal and Barrier"), ifelse(park_info$Network == "MIDN", paste("Mid-Atlantic"), paste("Eastern Rivers and Mountains")))))` `r paste0( '(', park_info$Network, ')')` Inventory and Monitoring Network (Figure 1). `r paste(park_info$park)`'s regeneration status is categorized as `r paste(park_data$park_reggrp)`. Figures 2 & 3 present trends of tree, sapling, and seedling measures. Figure 4 shows the stocking index for `r paste(park_info$park)`, and Figure 5 represents trends in tree basal area and density. To see the distribution of trees by diameter classes, see Figure 6. Finally, a full summary of regeneration status, native canopy trends, native sub-canopy trends, and exotic trends for 13 metrics can be seen in Table 1.
 
-### Results
-`r paste(park_info$park_full)` (`r paste(park_info$park)`) is located in the `r ifelse(park_info$Network == "NETN", paste("Northeast Temperate"), ifelse(park_info$Network == "NCRN", paste("National Capital Region"), ifelse(park_info$Network == "NCBN", paste("Northeast Coastal and Barrier"), ifelse(park_info$Network == "MIDN", paste("Mid-Atlantic"), paste("Eastern Rivers and Mountains")))))` `r paste0( '(', park_info$Network, ')')` Inventory and Monitoring Network (Figure 1). `r paste(park_info$park)`'s regeneration status is categorized as `r paste(park_data$park_reggrp)`. Figures 2 & 3 present trends of tree, sapling, and seedling measures. Figure 4 shows the stocking index for `r paste(park_info$park)`, and Figure 5 represents trends in tree basal area and density. To see the distribution of trees by diameter classes, see Figure 6. Finally, a full summary of regeneration status, native canopy trends, native subcanopy trends, and exotic trends for 13 metrics can be seen in Table 1.
-
-### Discussion
+**Management Suggestions** \hfill\break
 These findings underscore the critical importance of an integrated forest management approach that promotes an abundant and diverse regeneration layer. In most cases, this can only be achieved through long-term (i.e. multi-decadal) management of white-tailed deer and invasive plants. Small-scale disturbances that increase structural complexity may also promote regeneration where stress from deer and invasive plants is minimal. Without management intervention, forest loss may become a widespread pattern in eastern national parks and the broader region.
 
-### Source Publication and resources
+**Source Publication and resources** \hfill\break
 Miller K., Perles S., Schmit J.P., Matthews E., Weed A., Comiskey J., Marshall M., Nelson P., Fisichelli N. 202X. Forests in eastern national parks face widespread regeneration debt. Ecological Applications.
 
-Contact: Kate Miller (kathryn_miller@nps.gov) 
+Contact: \hfill\break
+1. Kate Miller (kathryn_miller@nps.gov)
+
+Links:\hfill\break
+1. \href{https://www.nps.gov/articles/series.htm?id=B9C6B751-A7E3-F246-5628389A0B80A4F7}{Managing Resilient Forests Initiative for Eastern National Parks}
 
 
-
-```{r echo=FALSE, results='asis'}
-cat("\\onecolumn")
-```
-
-```{r fig.cap = "Figure 1. Map of parks included in regional regeneration project and forest regeneration status.", out.width='80%', fig.align = "center", dpi = 600}
-include_graphics("inputs/Region1_manuscript.jpg")
-```
-
-\hfill\break
-\hfill\break
 
 ```{r fig.cap = "Figure 2. Trends in live tree, sapling and seedling abundance of all species and size classes. Trends are based on change over time across three complete survey cycles: Cycle 1 spanning 2008 – 2011, Cycle 2 spanning 2012 – 2015, and Cycle 3 spanning 2016 – 2019.", fig.align = "center", dpi = 600, out.width = "100%"}
 # figSvg,
@@ -120,17 +122,6 @@ include_graphics(paste0("../results/20220325/park_plots/total/", park_info$park,
 
 ```{r fig.cap = "Figure 3. Trends in tree, sapling and seedling abundance by species group. Trends are based on change over time across three complete survey cycles: Cycle 1 spanning 2008 – 2011, Cycle 2 spanning 2012 – 2015, and Cycle 3 spanning 2016 – 2019.", out.width='100%', fig.align = "center", dpi = 600}
 include_graphics(paste0("../results/20220325/park_plots/spp_grp/", park_info$park, "_spp_grp.png"))
-```
-```{r fig.cap = "Figure 4. Trends in regeneration stocking index by cycle. The stocking index only includes native canopy-forming species and is an index of whether the regeneration layer is sufficient to stock the future canopy. Trends are based on change over time across three complete survey cycles: Cycle 1 spanning 2008 – 2011, Cycle 2 spanning 2012 – 2015, and Cycle 3 spanning 2016 – 2019.", out.width='80%', fig.align = "center", dpi = 600}
-include_graphics(paste0("../results/20220325/park_plots/indices/", park_info$park, "_stock_noline.png"))
-```
-
-```{r fig.cap = "Figure 5. Trends in tree basal area (BA) and density by 10 cm diameter size classes. Trends are based on change over time across three complete survey cycles: Cycle 1 spanning 2008 – 2011, Cycle 2 spanning 2012 – 2015, and Cycle 3 spanning 2016 – 2019.", out.width='80%', fig.align = "center", dpi = 600}
-include_graphics(paste0("../results/20220325/park_plots/tree_sizes/", park_info$park, "_size_metrics.png"))
-```
-
-```{r fig.cap = "Figure 6. Tree diameter distribution in 10 cm increments by cycle. Trends are based on change over time across three complete survey cycles: Cycle 1 spanning 2008 – 2011, Cycle 2 spanning 2012 – 2015, and Cycle 3 spanning 2016 – 2019.", out.width='70%', fig.align = "center", dpi = 600}
-include_graphics(paste0("../results/20220325/park_plots/tree_sizes/", park_info$park, "_diam_dist.png"))
 ```
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="80%"}
