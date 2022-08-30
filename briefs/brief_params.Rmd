@@ -98,6 +98,12 @@ park_table <- read.csv("../results/20220325/final_park_results.csv") %>%
 **Main Findings** \hfill\break
 `r paste(park_info$park_full)` (`r paste(park_info$park)`) is located in the `r ifelse(park_info$Network == "NETN", paste("Northeast Temperate"), ifelse(park_info$Network == "NCRN", paste("National Capital Region"), ifelse(park_info$Network == "NCBN", paste("Northeast Coastal and Barrier"), ifelse(park_info$Network == "MIDN", paste("Mid-Atlantic"), paste("Eastern Rivers and Mountains")))))` `r paste0( '(', park_info$Network, ')')` Inventory and Monitoring Network (Figure 1). `r paste(park_info$park)`'s regeneration status is categorized as `r paste(park_data$park_reggrp)`. Figures 2 & 3 present trends of tree, sapling, and seedling measures. Figure 4 shows the stocking index for `r paste(park_info$park)`, and Figure 5 represents trends in tree basal area and density. To see the distribution of trees by diameter classes, see Figure 6. Finally, a full summary of regeneration status, native canopy trends, native sub-canopy trends, and exotic trends for 13 metrics can be seen in Table 1.
 
+\begin{specwrapfigure}{r}{0.3\textwidth}
+  \centering
+    \includegraphics[width=\linewidth]{`r paste0("../results/parkregen_plots/", park_info$park, ".png")`}
+  \caption{Figure 2. Regneration status broken down by metric.}
+\end{specwrapfigure}
+
 **Management Suggestions** \hfill\break
 These findings underscore the critical importance of an integrated forest management approach that promotes an abundant and diverse regeneration layer. In most cases, this can only be achieved through long-term (i.e. multi-decadal) management of white-tailed deer and invasive plants. Small-scale disturbances that increase structural complexity may also promote regeneration where stress from deer and invasive plants is minimal. Without management intervention, forest loss may become a widespread pattern in eastern national parks and the broader region.
 
@@ -117,7 +123,7 @@ Links:\hfill\break
 # fig_svg <- cowplot::ggdraw() + cowplot::draw_image(paste0("../results/20220325/park_plots/total/", park_info$park, "_Total_metrics.svg"))
 # 
 # plot(fig_svg)
-include_graphics(paste0("../results/20220325/park_plots/total/", park_info$park, "_Total_metrics.png"))
+# include_graphics(paste0("../results/20220325/park_plots/total/", park_info$park, "_Total_metrics.png"))
 ```
 
 ```{r fig.cap = "Figure 3. Trends in tree, sapling and seedling abundance by species group. Trends are based on change over time across three complete survey cycles: Cycle 1 spanning 2008 – 2011, Cycle 2 spanning 2012 – 2015, and Cycle 3 spanning 2016 – 2019.", out.width='100%', fig.align = "center", dpi = 600}
@@ -125,18 +131,18 @@ include_graphics(paste0("../results/20220325/park_plots/spp_grp/", park_info$par
 ```
 
 ```{r echo=FALSE, message=FALSE, warning=FALSE, out.width="80%"}
-
-metric_table <- park_table %>%
-  select(park, labels, metgrp, sign) %>%
-  filter(park == park_info$park) %>% 
-  #filter(park == "ACAD") %>% 
-  pivot_wider(names_from = metgrp, values_from = sign) %>% 
-  arrange(factor(labels, levels = c('Tree BA', 'Tree Density', 'Sapling BA', 'Sapling Density',                                         'Seedling Density', 'Stocking Index', 'everything()'))) %>% 
-  select(-park) %>% 
-  rename(Variable = labels)
-
-knitr::kable(metric_table, align = "l", format = "latex", vline = "", booktab = T, toprule = "\\toprule", midrule = "\\midrule", bottomrule = "\\bottomrule", caption = "Table 1. Summary of status and trends for each forest metric. Regeneration status metrics are based on the most recent 4 years of data (2016 – 2019). For more information on how the status thresholds are defined, see the source publication.") %>% 
-  kable_styling(font_size = 9, position = "center", full_width = FALSE)
+# 
+# metric_table <- park_table %>%
+#   select(park, labels, metgrp, sign) %>%
+#   filter(park == park_info$park) %>% 
+#   #filter(park == "ACAD") %>% 
+#   pivot_wider(names_from = metgrp, values_from = sign) %>% 
+#   arrange(factor(labels, levels = c('Tree BA', 'Tree Density', 'Sapling BA', 'Sapling Density',                                         'Seedling Density', 'Stocking Index', 'everything()'))) %>% 
+#   select(-park) %>% 
+#   rename(Variable = labels)
+# 
+# knitr::kable(metric_table, align = "l", format = "latex", vline = "", booktab = T, toprule = "\\toprule", midrule = "\\midrule", bottomrule = "\\bottomrule", caption = "Table 1. Summary of status and trends for each forest metric. Regeneration status metrics are based on the most recent 4 years of data (2016 – 2019). For more information on how the status thresholds are defined, see the source publication.") %>% 
+#   kable_styling(font_size = 9, position = "center", full_width = FALSE)
 ```
 <!-- **Sapling Density**: Densities < 0.1 stems/sq.m are classified as critical; densities between 0.1 – 0.16 stems/sq.m are classified as caution (Niewinski et al., 2006); densities greater than or equal to 0.16 stems/sq.m are classified as acceptable.\ -->
 <!-- **Seedling Density**: Densities < 0.25 stems/sq.m are classified as critical; densities between 0.25 – 1.99 stems/sq.m are classified as Caution; densities greater than or equal to 2 stems/sq.m are classified as acceptable.\ -->

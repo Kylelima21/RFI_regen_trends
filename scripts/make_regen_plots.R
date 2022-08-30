@@ -65,6 +65,14 @@ results_plot <-
 results_plot
 
 #ggsave(paste("results/parkregen_plots/", "test.png"), height = 6, width = 4)
-ggsave(paste("parkregen_plots/", parkcode, ".png"), height = 6, width = 4)
+ggsave(paste("results/parkregen_plots/", parkcode, ".png", sep = ""), height = 6, width = 4)
 
 }
+
+
+
+park_names <- read.csv("./data/park_names.csv")
+parkcode <- park_names$park
+
+
+map(parkcode, make_plots)

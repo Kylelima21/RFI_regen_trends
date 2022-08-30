@@ -13,7 +13,8 @@ source("./briefs/scripts/run_briefs_function.R")
 
 park_names <- read.csv("./data/park_names.csv") %>% 
   #left_join(., park_data, by = "park") %>% 
-  filter(park == "ACAD" | park == "GETT")
+  filter(park == "ACAD" | park == "CATO" 
+         | park == "HOFU" | park == "NERI")
 
 # Create briefs
 run_briefs(park_names)

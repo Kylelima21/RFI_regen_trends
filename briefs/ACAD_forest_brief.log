@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.17)  30 AUG 2022 13:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.24 (TeX Live 2022) (preloaded format=pdflatex 2022.7.17)  30 AUG 2022 15:50
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -881,57 +881,60 @@ File: inputs/Region1_manuscript.jpg Graphic file (type jpg)
 Package pdftex.def Info: inputs/Region1_manuscript.jpg  used on input line 117.
 
 (pdftex.def)             Requested size: 234.87802pt x 181.49664pt.
+
+Package wrapfig Warning: Collision between wrapping environments on input line 
+138.
+
+<../results/parkregen_plots/ACAD.png, id=8, 1204.5pt x 1806.75pt>
+File: ../results/parkregen_plots/ACAD.png Graphic file (type png)
+<use ../results/parkregen_plots/ACAD.png>
+Package pdftex.def Info: ../results/parkregen_plots/ACAD.png  used on input lin
+e 140.
+(pdftex.def)             Requested size: 140.91307pt x 211.3696pt.
+
+Package wrapfig Warning: Stationary wrapfigure forced to float on input line 14
+4.
+
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-52.
+61.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-52.
+61.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-152.
+161.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-152.
+161.
 (/usr/local/texlive/2022/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 152.
+(Font)              <10> on input line 161.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 152.
+(Font)              <7> on input line 161.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 152.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 152
+(Font)              <5> on input line 161.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 161
 .
 (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-msa.cfg
 File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 152
+LaTeX Font Info:    Trying to load font information for U+msb on input line 161
 .
 (/usr/local/texlive/2022/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 ) (/usr/local/texlive/2022/texmf-dist/tex/latex/microtype/mt-msb.cfg
 File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
 )
-<../results/20220325/park_plots/total/ACAD_Total_metrics.png, id=10, 7227.0pt x
- 1987.425pt>
-File: ../results/20220325/park_plots/total/ACAD_Total_metrics.png Graphic file 
-(type png)
-<use ../results/20220325/park_plots/total/ACAD_Total_metrics.png>
-Package pdftex.def Info: ../results/20220325/park_plots/total/ACAD_Total_metric
-s.png  used on input line 160.
-(pdftex.def)             Requested size: 469.66122pt x 129.15683pt.
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
 <../results/20220325/park_plots/spp_grp/ACAD_spp_grp.png, id=12, 7227.0pt x 198
 7.425pt>
 File: ../results/20220325/park_plots/spp_grp/ACAD_spp_grp.png Graphic file (typ
@@ -943,15 +946,6 @@ g  used on input line 169.
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <9> on input line 181.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 181.
-
-Overfull \hbox (2.12868pt too wide) in paragraph at lines 181--205
- [][] 
- []
-
 
 Underfull \hbox (badness 10000) has occurred while \output is active
 
@@ -960,7 +954,7 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 <inputs/NPS_logo.png, id=13, 2007.5pt x 2613.765pt>
 File: inputs/NPS_logo.png Graphic file (type png)
 <use inputs/NPS_logo.png>
-Package pdftex.def Info: inputs/NPS_logo.png  used on input line 207.
+Package pdftex.def Info: inputs/NPS_logo.png  used on input line 176.
 (pdftex.def)             Requested size: 52.71758pt x 68.63828pt.
 
 Package fancyhdr Warning: \headheight is too small (12.0pt): 
@@ -972,46 +966,50 @@ Package fancyhdr Warning: \headheight is too small (12.0pt):
 
 [1{/usr/local/texlive/2022/texmf-var/fonts/map/pdftex/updmap/pdftex.map}
 
- <./inputs/NPS_logo.png> <./inputs/Region1_manuscript.jpg>]
-<inputs/Schoodic_Stacked.jpeg, id=27, 436.63126pt x 424.58624pt>
+ <./inputs/NPS_logo.png> <./inputs/Region1_manuscript.jpg> <../results/parkrege
+n_plots/ACAD.png>]
+<inputs/Schoodic_Stacked.jpeg, id=29, 436.63126pt x 424.58624pt>
 File: inputs/Schoodic_Stacked.jpeg Graphic file (type jpg)
 <use inputs/Schoodic_Stacked.jpeg>
-Package pdftex.def Info: inputs/Schoodic_Stacked.jpeg  used on input line 207.
+Package pdftex.def Info: inputs/Schoodic_Stacked.jpeg  used on input line 176.
 (pdftex.def)             Requested size: 34.96452pt x 33.99998pt.
 File: inputs/NPS_logo.png Graphic file (type png)
 <use inputs/NPS_logo.png>
-Package pdftex.def Info: inputs/NPS_logo.png  used on input line 207.
+Package pdftex.def Info: inputs/NPS_logo.png  used on input line 176.
 (pdftex.def)             Requested size: 26.0984pt x 33.98013pt.
 
 Package fancyhdr Warning: \footskip is too small (34.0pt): 
 (fancyhdr)                Make it at least 37.60002pt, for example:
 (fancyhdr)                \setlength{\footskip}{37.60002pt}.
 
-<inputs/background2.jpg, id=29, 4015.0pt x 1364.09625pt>
+<inputs/background2.jpg, id=31, 4015.0pt x 1364.09625pt>
 File: inputs/background2.jpg Graphic file (type jpg)
 <use inputs/background2.jpg>
-Package pdftex.def Info: inputs/background2.jpg  used on input line 207.
+Package pdftex.def Info: inputs/background2.jpg  used on input line 176.
 (pdftex.def)             Requested size: 614.29301pt x 208.70604pt.
-[2 <./inputs/background2.jpg> <../results/20220325/park_plots/total/ACAD_Total_
-metrics.png> <../results/20220325/park_plots/spp_grp/ACAD_spp_grp.png> <./input
-s/Schoodic_Stacked.jpeg>] (./ACAD_forest_brief.aux) ) 
+[2 <./inputs/background2.jpg> <../results/20220325/park_plots/spp_grp/ACAD_spp_
+grp.png> <./inputs/Schoodic_Stacked.jpeg>]
+
+Package caption Warning: Unused \captionsetup[table] on input line 69.
+See the caption package documentation for explanation.
+
+(./ACAD_forest_brief.aux) ) 
 Here is how much of TeX's memory you used:
- 25547 strings out of 478268
- 475862 string characters out of 5846347
- 775545 words of memory out of 5000000
- 43204 multiletter control sequences out of 15000+600000
- 510266 words of font info for 93 fonts, out of 8000000 for 9000
+ 25495 strings out of 478268
+ 474773 string characters out of 5846347
+ 770974 words of memory out of 5000000
+ 43173 multiletter control sequences out of 15000+600000
+ 501675 words of font info for 76 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  99i,15n,117p,1022b,761s stack positions out of 10000i,1000n,20000p,200000b,200000s
-{/usr/local/texlive/2022/t
-exmf-dist/fonts/enc/dvips/lm/lm-ec.enc}</usr/local/texlive/2022/texmf-dist/font
-s/type1/public/lm/lmbx10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/pu
-blic/lm/lmbx12.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lm
-r10.pfb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr9.pfb>
-Output written on ACAD_forest_brief.pdf (2 pages, 12483218 bytes).
+{/usr/local/texlive/2022/texmf-dist/fonts/enc/dvips/
+lm/lm-ec.enc}</usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx10.p
+fb></usr/local/texlive/2022/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/l
+ocal/texlive/2022/texmf-dist/fonts/type1/public/lm/lmr10.pfb>
+Output written on ACAD_forest_brief.pdf (2 pages, 12132910 bytes).
 PDF statistics:
- 67 PDF objects out of 1000 (max. 8388607)
- 45 compressed objects within 1 object stream
- 9 named destinations out of 1000 (max. 500000)
- 22579 words of extra memory for PDF output out of 24883 (max. 10000000)
+ 61 PDF objects out of 1000 (max. 8388607)
+ 41 compressed objects within 1 object stream
+ 8 named destinations out of 1000 (max. 500000)
+ 18483 words of extra memory for PDF output out of 20736 (max. 10000000)
 

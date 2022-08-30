@@ -10,3 +10,4 @@ data/NETN_data/
 briefs/outputs/
 results/20220325/park_plots
 results/parkregen_plots
+*.log
