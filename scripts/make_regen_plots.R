@@ -8,7 +8,7 @@ results_final <- read.csv("./results/20220325/final_park_results.csv") %>%
   filter(park == paste(parkcode))
 
 results_plot <- 
-  ggplot(results_final, aes(x = park_ord, y = factor(label_order, level = c("Sapling Density", 
+  ggplot(results_final, aes(y = park_ord, x = factor(label_order, level = c("Sapling Density", 
                                                                             "Seedling Density",
                                                                             "% Stocked Plots",
                                                                             "Stocking Index",
@@ -42,19 +42,19 @@ results_plot <-
                                # "Not Significant",
                                # "Not Modeled"),
                     name = NULL)+
+  scale_y_discrete(expand = c(0,0))+
   scale_x_discrete(expand = c(0,0))+
-  scale_y_discrete(limits = rev, expand = c(0,0))+
   theme_bw()+
-  theme(axis.text.x = element_blank(),
-        axis.ticks.x = element_blank(),
-        axis.text.y = element_text(size = 13, color = "black"),
+  theme(axis.text.y = element_blank(),
+        axis.ticks.y = element_blank(),
+        axis.text.x = element_text(size = 13, color = "black", angle = 45, hjust = 1),
         axis.title = element_blank(),
         panel.border = element_rect(color = "black", size = 1),
         #strip.text.y = element_text(size = 10),
         #strip.text.x = element_text(size = 9.5),
         #strip.placement = 'outside',
         legend.spacing.x = unit(0.5, 'cm'),
-        legend.position = 'right',
+        legend.position = 'left',
         legend.title = element_text(size = 10), 
         legend.text = element_text(size = 13, margin = margin(l = -0.9, unit = 'cm')),
         #legend.background = element_rect(color = "#B9B9B9", size = 0.25))+
@@ -65,7 +65,7 @@ results_plot <-
 results_plot
 
 #ggsave(paste("results/parkregen_plots/", "test.png"), height = 6, width = 4)
-ggsave(paste("results/parkregen_plots/", parkcode, ".png", sep = ""), height = 6, width = 4)
+ggsave(paste("results/parkregen_plots/", parkcode, ".png", sep = ""), height = 2.2, width = 8)
 
 }
 

@@ -26,9 +26,10 @@ names(dens_df)
 
 metrics <- c(names(dens_df[, c(18:87)]))
 
+
 # response titles for plotting
-metric_names <- c(rep("Tree BA (sq.m/ha)", 4), 
-                  rep("Tree Density (stems/ha)", 4),
+metric_names <- c(rep("Tree basal area (sq.m/ha)", 4), 
+                  rep("Tree density (stems/ha)", 4),
                   rep("Tree BA 10 cm (sq.m/ha)", 4),  
                   rep("Tree BA 20 cm (sq.m/ha)", 4), 
                   rep("Tree BA 30 cm (sq.m/ha)", 4),
@@ -37,16 +38,16 @@ metric_names <- c(rep("Tree BA (sq.m/ha)", 4),
                   rep("Tree Dens. 20 cm (stems/ha)", 4), 
                   rep("Tree Dens. 30 cm (stems/ha)", 4),
                   rep("Tree Dens. 40 cm+ (stems/ha)", 4),
-                  rep("Sapling Density (stems/sq.m)", 4),
-                  rep("Sapling BA (sq.m/ha)", 4),
-                  rep("Seedling Density (stems/sq.m)", 4),
-                  "Tree BA (sq.m/ha)", "Tree Density (stems/ha)", 
+                  rep("Sapling density (stems/sq.m)", 4),
+                  rep("Sapling basal area (sq.m/ha)", 4),
+                  rep("Seedling density (stems/sq.m)", 4),
+                  "Tree basal area (sq.m/ha)", "Tree density (stems/ha)", 
                   "Tree BA 10 cm (sq.m/ha)", "Tree Dens. 10 cm (stems/ha)", 
                   "Tree BA 20 cm (sq.m/ha)", "Tree Dens. 20 cm (stems/ha)",
                   "Tree BA 30 cm (sq.m/ha)", "Tree Dens. 30 cm (stems/ha)",
                   "Tree BA 40 cm (sq.m/ha)", "Tree Dens. 40 cm (stems/ha)",
-                  "Sapling BA (sq.m/ha)", "Sapling Density (stems/sq.m)", 
-                  "Seedling Density (stems/sq.m)",    
+                  "Sapling basal area (sq.m/ha)", "Sapling density (stems/sq.m)", 
+                  "Seedling density (stems/sq.m)",    
                   "Stocking Index", "Sorensen Sapling", 
                   "Horn Sapling", "Sorensen Seedling", 
                   "Horn Seedling")
