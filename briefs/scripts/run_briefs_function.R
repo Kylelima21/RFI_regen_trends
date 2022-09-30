@@ -17,7 +17,8 @@ run_briefs <- function(x) {
   make_briefs <- function(park_code, park_name) {
     rmarkdown::render(input = "briefs/brief_params.Rmd", 
                       output_file = sprintf("outputs/%s_forest_brief.pdf", park_code),
-                      params = list(park = park_name))
+                      params = list(park = park_name),
+                      quiet = T)
   }
   
   map2(park_code, park_name, make_briefs)

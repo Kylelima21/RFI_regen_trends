@@ -3,50 +3,39 @@ output:
   pdf_document:
     highlight: tango
     keep_tex: no
-sansfont: Times New Roman
-fontsize: 10.9pt
-geometry: margin = 1in
+mainfont: NPS Rawlinson OT
+sansfont: FrutigerLTStd-Roman
+fontsize: 10pt
+geometry: "left=1.5cm,right=1.5cm,top=2cm,bottom=2cm"
 header-includes:
-  - \usepackage{titling}
-  - \usepackage{graphicx}
-  - \usepackage{fancyhdr}
-  - \usepackage{background}
-  - \usepackage{hyperref}
-  - \usepackage{caption}
-  - \usepackage{longtable}
-  - \usepackage{booktabs}
-  - \usepackage{float}
-  - \usepackage{wrapfig}
-  - \usepackage{graphicx}
-  - \usepackage{ragged2e}
+  - \usepackage{titling, graphicx, fancyhdr, background, hyperref, caption, booktabs, float, graphicx, ragged2e, ulem}
   - \captionsetup[figure]{labelformat=empty}
   - \captionsetup[table]{labelformat=empty}
   - \pagestyle{fancy}
   - \fancypagestyle{plain}{\pagestyle{fancy}}
   - \fancyhf{}
-  - \fancyhead[L]{\ifnum\value{page} < 2 {\colorbox{black}{\parbox[b][2.5cm][c]{16.3cm}{\textcolor{white}{Eastern Forest Working Group\\ Inventory and Monitoring Program\\ \hspace{1cm}\\Forest Health Monitoring\\ \hspace{1cm}}}}}\else {Eastern Forest Working Group}\small \fi}
-  - \chead[C]{\ifnum\value{page} < 2 {\textcolor{white}{\hspace{5.7cm}National Park Service\\ \hspace{7.2cm}U.S. Department of the Interior\\ \vspace{1.1cm}}} \else \fi}
-  - \fancyhead[R]{\ifnum\value{page} < 2 {\includegraphics[height=.95in,width=.95in]{inputs/NPS_logo.png}} \else {\today}\small \fi}
+  - \fancyhead[L]{\ifnum\value{page} < 2 {\colorbox{black}{\parbox[b][2.5cm][c]{18.38cm}{\textcolor{white}{\textsf{Eastern Forest Working Group\\ Inventory and Monitoring Program\\ \hspace{1cm}\\Forest Health Monitoring\\ \hspace{1cm}}}}}}\else {\textsf{Eastern Forest Working Group}}\small \fi}
+  - \chead[C]{\ifnum\value{page} < 2 {\textcolor{white}{\hspace{7.7cm}\textsf{National Park Service\\ \hspace{9.2cm}U.S. Department of the Interior\\ \vspace{1.1cm}}}} \else \fi}
+  - \fancyhead[R]{\ifnum\value{page} < 2 {\includegraphics[height=.95in,width=.95in]{inputs/NPS_logo.png}} \else {\textsf {\today}}\small \fi}
   - \setlength{\footskip}{34pt}
   - \fancyfoot[C]{\thepage\footnotesize}
   - \rfoot{\ifnum\value{page} > 1 \href{https://schoodicinstitute.org}{\includegraphics[height=\footskip]{inputs/Schoodic_Stacked.jpeg}} \href{https://www.nps.gov/index.htm}{\includegraphics[height=\footskip]{inputs/NPS_logo.png}} \else \fi}
   - \backgroundsetup{scale=1,opacity=0.5,angle=0,placement=bottom,contents={\ifnum\value{page} > 1 {\includegraphics[width=8.5in]{inputs/background2.jpg}} \else \fi}}
-  - \pretitle{\begin{center}\LARGE\bfseries\vspace{.5cm}}
-  - \posttitle{\end{center}}
-  - \setlength{\abovecaptionskip}{3pt}
+  - \setlength{\abovecaptionskip}{0pt}
   - \setlength{\belowcaptionskip}{0pt}
-  - \setlength{\intextsep}{0pt}
+  - \setlength{\intextsep}{-5pt}
 params:
   park: park
 ---
+<!-- - \pretitle{\begin{center}\LARGE\bfseries\vspace{0cm}} -->
+<!-- - \posttitle{\end{center}\vspace{-1cm}} -->
 
-\newenvironment{specwrapfigure}
- {%
-  \setlength{\columnsep}{15pt}%
-  \wrapfloat{figure}%
- }
- {\endwrapfloat}
- 
+<!-- \newenvironment{specwrapfigure} -->
+<!--  {% -->
+<!--   \setlength{\columnsep}{5pt}% -->
+<!--   \wrapfloat{figure}% -->
+<!--  } -->
+<!--  {\endwrapfloat} -->
  
 ```{r setup, include=FALSE}
 knitr::opts_chunk$set(echo = FALSE, fig.pos = "!h")
@@ -83,7 +72,7 @@ park_table <- read.csv("../results/20220325/final_park_results.csv") %>%
          sign = str_replace(sign, "signinc_bad", "increase"),
          sign = str_replace(sign, "signinc_good", "increase"))
 
-park_text <- read.csv("../data/parks_mgt_20220831.csv") %>% 
+park_text <- read.csv("../data/parks_mgt_20220923.csv") %>% 
   rename_with(tolower) %>% 
   filter(park == paste(park_info$park))
 ```
@@ -117,16 +106,57 @@ mgtst <- if (park_text$current.active.deer.management == "yes" &
              park_text$thinning...canopy.gaps == "no" &
              park_text$prescribed.burning == "no") {
     
-    paste("Although we do not recommend any other management stategies at this time, conditions are changing rapidly across parks and continued monitoring and reassessment of management actions is necessary to avoid future forest loss in the park.")
+    paste("")
     
   } else if (park_text$current.active.deer.management == "no" & 
              park_text$reccomend.deer.management == "no" &
              park_text$thinning...canopy.gaps == "yes" &
              park_text$prescribed.burning == "yes") {
     
-    paste("We also recommend the assessment and application of other management actions including, thinning, canopy gap management, and prescribed burning, to help avoid forest loss in the park.")
+    paste("We also recommend the assessment and application of other management actions, including thinning, canopy gap management, and prescribed burning, to help avoid forest loss in the park.")
     
   }
+
+
+
+
+mgtstrt <- if (park_text$current.active.deer.management == "yes" & 
+    park_text$reccomend.deer.management == "yes" &
+    park_text$thinning...canopy.gaps == "no" &
+    park_text$prescribed.burning == "no") {
+
+  paste("")
+    
+  } else if (park_text$current.active.deer.management == "no" & 
+             park_text$reccomend.deer.management == "yes" &
+             park_text$thinning...canopy.gaps == "no" &
+             park_text$prescribed.burning == "no") {
+    
+    paste("We also recommend that long-term deer management strategies be implemented to help avoid forest loss in the park.")
+    
+  } else if (park_text$current.active.deer.management == "no" & 
+             park_text$reccomend.deer.management == "yes" &
+             park_text$thinning...canopy.gaps == "no" &
+             park_text$prescribed.burning == "yes") {
+    
+    paste("We also recommend that long-term deer management strategies be implemented, as well as prescribed burning, to help avoid forest loss in the park.")
+    
+  } else if (park_text$current.active.deer.management == "no" & 
+             park_text$reccomend.deer.management == "no" &
+             park_text$thinning...canopy.gaps == "no" &
+             park_text$prescribed.burning == "no") {
+    
+    paste("")
+    
+  } else if (park_text$current.active.deer.management == "no" & 
+             park_text$reccomend.deer.management == "no" &
+             park_text$thinning...canopy.gaps == "yes" &
+             park_text$prescribed.burning == "yes") {
+    
+    paste("We also recommend the assessment and application of other management actions, including thinning, canopy gap management, and prescribed burning, to help avoid forest loss in the park.")
+    
+  }
+
 
 
 notable <- if (park_text$notable.findings == "none") {
@@ -155,58 +185,137 @@ notable <- if (park_text$notable.findings == "none") {
   
 } else if (park_text$notable.findings == "regeneration mismatch ") {
   
-  paste0(" ", park_info$park, " is experiencing regeneration mismatch between the forest canopy layer and seedling layer due to an abundance of regeneration from species which do not form an overstory canopy. In this park, the mismatch is occuring due to ", park_text$x, ".")
+  paste0(" ", park_info$park, " is experiencing regeneration mismatch between the forest canopy layer and seedling layer due to an abundance of regeneration from species which do not form an overstory canopy. In this park, the mismatch is occurring due to ", park_text$x, ".")
   
 }
 ```
 
-\hfill\break
-\hfill\break
-\begin{center}\huge\bf {The Current Forest Regeneration Status for `r paste(park_info$park_full)` is: `r paste(park_data$park_reggrp)`}\end{center}
-
-\begin{specwrapfigure}{r}{0.7\textwidth}
-  \centering
-    \includegraphics[width=\linewidth]{inputs/Region1_manuscript.jpg}
-  \caption{{\bf Figure 1}. Map of parks included in regional regeneration project and forest regeneration status.}
-\end{specwrapfigure}
-
-\begin{flushleft}\large {}\end{flushleft}
-
-\begin{flushleft}\large\bf {Introduction}\end{flushleft}
-`r paste(park_info$park_full)` (`r paste(park_info$park)`) is located in the `r ifelse(park_info$Network == "NETN", paste("Northeast Temperate"), ifelse(park_info$Network == "NCRN", paste("National Capital Region"), ifelse(park_info$Network == "NCBN", paste("Northeast Coastal and Barrier"), ifelse(park_info$Network == "MIDN", paste("Mid-Atlantic"), paste("Eastern Rivers and Mountains")))))` `r paste0( '(', park_info$Network, ')')` Inventory and Monitoring Network (Figure 1). This brief summarizes the notable findings from the Eastern Forest Working Group Forest Health Monitoring project, and recommends management actions to prevent the loss of forests in `r paste(park_info$park)`. For more detailed information see the source publication in the 'Resources' section below.
-
-\begin{flushleft}\small {}\end{flushleft}
-
-\begin{flushleft}\large\bf {Main Findings}\end{flushleft}
-On a four category scale (Secure, Insecure, Probable Failure, and Imminent Failure), `r paste(park_info$park)` has a forest regeneration status of \textbf{`r paste(park_data$park_reggrp)`}. This means that the park `r ifelse(park_data$park_reggrp == "Imminent Failure", paste("is experiencing severe regeneration failure, and is at risk of forest loss. In some cases, this forest loss may already be underway"), ifelse(park_data$park_reggrp == "Probable Failure", paste("is experiencing regeneration failure as indicated by lacking and/or declining sapling numbers, and low numbers of seedlings"), ifelse(park_data$park_reggrp == "Insecure", paste("currently lacks saplings, but has sufficient and often increasing seedling numbers, and overall lower deer browse impacts. This tends to be due to forest dynamics, such as succession"), paste("currently has abundant seedling and sapling numbers, and shows few concerning trends in regeneration metrics"))))`.`r paste(notable)``r ifelse(park_text$findings.2 != "none", paste0(" Additionally, we found that there is ", park_text$findings.2, " in the park."), paste(""))` The regeneration status for each of the 10 metrics examined in this study are described in Figure 2. Depicted in Figure 3 are the trends in tree, sapling, and seedling abundance by native canopy, other native species, and exotics. 
-
-\centering\includegraphics[width=.7\linewidth]{`r paste0("../results/parkregen_plots/", park_info$park, ".png")`}
-\captionof{figure}{{\bf Figure 2}. Regeneration status for each of the 10 metrics in the study.}
-
-
-
-\centering\includegraphics[width=1\linewidth]{`r paste0("../results/20220325/park_plots/spp_grp/", park_info$park, "_spp_grp.png")`}
-\captionof{figure}{{\bf Figure 3}. Trends in tree, sapling and seedling abundance by species group. Trends are based on change over time across three complete survey cycles: Cycle 1 (2008 – 2011), Cycle 2 (2012 – 2015), and Cycle 3 (2016 – 2019).}
-
-\hfill\break
-
-\begin{flushleft}\large\bf {Management Recommendations}\end{flushleft}
 \begin{flushleft}\tiny {}\end{flushleft}
-\begin{flushleft}\normalsize {We suggest that managers of `r paste(park_info$park)` continue invasive plant management actions, as is true for all of the eastern national parks in this study. `r paste(mgtst)` Protected forests such as those in eastern national parks need forest stewardship plans, along with the resources to implement them, that address sustained commitment to reducing deer browse impacts, managing invasive plants, and enhancing forest structural complexity and diversity to secure sufficient regeneration. `r ifelse(park_data$park_reggrp == "Imminent Failure" | park_data$park_reggrp == "Probable Failure", paste0("These efforts are especially important for ", park_info$park, " as the park is very likely to lose forest cover without intervention."), paste(""))` Please refer to the source publication for more information on management strategies, and reach out to the contact below for further assistance.
+\begin{flushleft}\tiny {}\end{flushleft}
+\begin{center}
+\huge\textsf {`r ifelse(park_data$park_reggrp == "Imminent Failure", paste0("Imminent Failure of Forest Regeneration Requires Sustained Management in ", park_info$park_full), ifelse(park_data$park_reggrp == "Probable Failure", paste0("Probable Failure of Forest Regeneration Requires Sustained Management in ", park_info$park_full), ifelse(park_data$park_reggrp == "Insecure", paste0("Insecure Forest Regeneration Needs Sustained Management in ", park_info$park_full), ifelse(park_data$park_reggrp == "Secure", paste0("Forest Regeneration is Secure in ", park_info$park_full), paste("")))))`}
+\end{center}
 
-}\end{flushleft}
+<!-- `r ifelse(park_data$park_reggrp == "Imminent Failure", paste0("Forest Regeneration Failure is Imminent in ", park_info$park_full), ifelse(park_data$park_reggrp == "Probable Failure", paste0("Forest Regeneration will Probably Fail in ", park_info$park_full), ifelse(park_data$park_reggrp == "Insecure", paste0("Insecure Forest Regeneration needs Sustained Management in ", park_info$park_full), ifelse(park_data$park_reggrp == "Secure", paste0("Forest Regeneration is Secure in ", park_info$park_full), paste("")))))` -->
 
-\hfill\break
-\hfill\break
+<!-- `r ifelse(park_info$park == "ALPO" | park_info$park == "DEWA" | park_info$park == "MORR", paste0("The Current Forest Regeneration Status for ", park_info$park_full, " is:    \n \n", park_data$park_reggrp), paste0("The Current Forest Regeneration Status for ", park_info$park_full, " is: ", park_data$park_reggrp))` -->
 
-\begin{center}\large\bf {Resources}\end{center}
-\begin{flushleft}\normalsize {{\bf Source Publication:}\hfill\break Miller K., Perles S., Schmit J.P., Matthews E., Weed A., Comiskey J., Marshall M., Nelson P., Fisichelli N. 202X. Forests in eastern national parks face widespread regeneration debt. Ecological Applications.}\end{flushleft}
+<!-- \begin{center}\huge\bf {The Current Forest Regeneration Status for `r paste(park_info$park_full)` is: `r paste(park_data$park_reggrp)`}\end{center} -->
 
-\begin{flushleft}\normalsize {}\end{flushleft}
+<!-- `r ifelse(park_info$park == "ANTI" | park_info$park == "BLUE" | park_info$park == "MONO" | park_info$park == "PRWI", paste("The Current Forest Regeneration Status for ", park_info$park_full, " is: \n", park_data$park_reggrp), paste("The Current Forest Regeneration Status for ", park_info$park_full, " is: ", park_data$park_reggrp))` -->
 
-\begin{flushleft}\normalsize {\bf Contact:}\end{flushleft}
-`r ifelse(park_info$Network == "NETN", paste("Kate Miller, NETN Quantitative Ecologist (kathryn_miller@nps.gov)"), ifelse(park_info$Network == "MIDN", paste("Kate Miller, MIDN Quantitative Ecologist (kathryn_miller@nps.gov)"), ifelse(park_info$Network == "NCBN", paste("Kate Miller, NCBN Quantitative Ecologist (kathryn_miller@nps.gov)"), ifelse(park_info$Network == "NCRN", paste("Elizabeth Matthews, NCRN Regional Program Manager (elizabeth_matthews@nps.gov)"), ifelse(park_info$Network == "ERMN", paste("Stephanie Perles, ERMN Plant Ecologist (stephanie_perles@nps.gov)"), paste("ERROR"))))))` \hfill\break
+<!-- \begin{specwrapfigure}{r}{0.65\textwidth} -->
+<!--   \centering -->
+<!--     \includegraphics[width=\linewidth]{inputs/Region1_manuscript.jpg} -->
+<!--   \caption{{\bf Figure 1}. Map of parks included in regional regeneration project and forest regeneration status.} -->
+<!-- \end{specwrapfigure} -->
 
-\begin{flushleft}\normalsize {{\bf Links:}\hfill\break
-1. \href{https://www.nps.gov/articles/series.htm?id=B9C6B751-A7E3-F246-5628389A0B80A4F7}{Managing Resilient Forests Initiative for Eastern National Parks}}\end{flushleft}
+<!-- \begin{flushleft}\tiny {}\end{flushleft} -->
+
+\begin{flushleft}
+\Large\textsf {Introduction} 
+\break
+\normalsize 
+Forests are a key part of the landscape and visitor experience in eastern parks. These ecosystems are facing many stressors, including non-native plants, invasive tree pests, overabundant deer, and an altered fire regime. These stressors diminish forest resilience, which is the ability of an ecosystem to experience disturbance and rebound to similar functions, structure, and composition. A lack of tree regeneration - seedlings and saplings of canopy-forming trees - is an early indicator of reduced resilience and potential for future forest loss.
+
+The NPS Eastern Forest Working Group assessed 10 regeneration metrics in 39 parks containing about 1,500 permanent forest health monitoring plots sampled every four years (2008-2019). Here, we share results for `r paste(park_info$park_full)` (`r paste(park_info$park)`). For more detailed information on the full study, see the source publication in the {\bf Resources} section below.
+\end{flushleft}
+
+<!-- `r paste(park_info$park_full)` (`r paste(park_info$park)`) is located in the `r ifelse(park_info$Network == "NETN", paste("Northeast Temperate"), ifelse(park_info$Network == "NCRN", paste("National Capital Region"), ifelse(park_info$Network == "NCBN", paste("Northeast Coastal and Barrier"), ifelse(park_info$Network == "MIDN", paste("Mid-Atlantic"), paste("Eastern Rivers and Mountains")))))` `r paste0( '(', park_info$Network, ')')`  -->
+
+<!-- \begin{flushleft}\tiny {}\end{flushleft} -->
+
+\begin{flushleft}
+\Large\textsf {Main Findings}
+\break
+\normalsize
+On a four-category scale (Secure, Insecure, Probable Failure, and Imminent Failure), `r paste(park_info$park)` has a forest regeneration status of \textbf{`r paste(park_data$park_reggrp)`}. This means that the park `r ifelse(park_data$park_reggrp == "Imminent Failure", paste("is experiencing severe regeneration failure and has an elevated risk of forest loss. In some cases, this forest loss may already be underway"), ifelse(park_data$park_reggrp == "Probable Failure", paste("is experiencing regeneration failure as indicated by lacking and/or declining sapling numbers, and low numbers of seedlings"), ifelse(park_data$park_reggrp == "Insecure", paste("currently lacks adequate saplings and seedlings, and generally has moderate deer browse impacts"), paste("currently has abundant seedling and sapling numbers, and shows few concerning trends in regeneration metrics"))))` (Figure 2).`r paste(notable)``r ifelse(park_text$findings.2 != "none", paste0(" Additionally, we found ", park_text$findings.2, " in the park."), paste(""))` The trends over time in tree, sapling, and seedling abundance by native canopy, subcanopy, and exotics are shown in Figure 3.
+\end{flushleft}
+
+\begin{flushleft}
+\tiny {}
+\end{flushleft}
+
+\begin{figure}
+\centering
+\begin{minipage}{.65\textwidth}
+\centering
+\includegraphics[width=1\linewidth]{inputs/Region1_manuscript.jpg}
+\captionof{figure}{\textsf {\textbf {Figure 1}. Map of parks included in regional regeneration project and forest regeneration status. `r paste(park_info$park_full)` is located in the `r ifelse(park_info$Network == "NETN", paste("Northeast Temperate"), ifelse(park_info$Network == "NCRN", paste("National Capital Region"), ifelse(park_info$Network == "NCBN", paste("Northeast Coastal and Barrier"), ifelse(park_info$Network == "MIDN", paste("Mid-Atlantic"), paste("Eastern Rivers and Mountains")))))` `r paste0( '(', park_info$Network, ')')` Inventory and Monitoring Network.}}
+\label{fig:test1}
+\end{minipage}\hspace{.05\textwidth}%
+\begin{minipage}{.3\textwidth}
+\centering
+\includegraphics[width=1\linewidth]{`r paste0("../results/parkregen_plots/", park_info$park, ".png")`}
+\captionof{figure}{\textsf {\textbf {Figure 2}. Regeneration status for each of the 10 metrics in `r paste(park_info$park_full)`.}}
+\label{fig:test2}
+\end{minipage}
+\end{figure}
+
+<!-- \centering -->
+<!-- \includegraphics[width=.7\linewidth]{inputs/Region1_manuscript.jpg} -->
+<!-- \captionof{figure}{\textsf {\textbf {Figure 1}. Map of parks included in regional regeneration project and forest regeneration status. `r paste(park_info$park)` is located in the `r ifelse(park_info$Network == "NETN", paste("Northeast Temperate"), ifelse(park_info$Network == "NCRN", paste("National Capital Region"), ifelse(park_info$Network == "NCBN", paste("Northeast Coastal and Barrier"), ifelse(park_info$Network == "MIDN", paste("Mid-Atlantic"), paste("Eastern Rivers and Mountains")))))` `r paste0( '(', park_info$Network, ')')` Inventory and Monitoring Network.}} -->
+
+<!-- \centering -->
+<!-- \includegraphics[width=.7\linewidth]{`r paste0("../results/parkregen_plots/", park_info$park, ".png")`} -->
+<!-- \captionof{figure}{\textsf {\textbf {Figure 2}. Regeneration status for each of the 10 metrics in the study.}} -->
+
+\centering
+\includegraphics[width=1\linewidth]{`r paste0("../results/20220325/park_plots/spp_grp/", park_info$park, "_spp_grp.png")`}
+\captionof{figure}{\textsf {\textbf {Figure 3}. Trends in tree, sapling, and seedling abundance by species group. Trends are based on change over time across three complete survey cycles: Cycle 1 (2008 – 2011), Cycle 2 (2012 – 2015), and Cycle 3 (2016 – 2019).}}
+
+\begin{flushleft}
+\tiny {}
+\end{flushleft}
+
+\begin{flushleft}
+\Large\textsf {Management Recommendations}
+\break
+\normalsize
+Eastern national parks need a sustained commitment to reducing deer browse impacts, managing invasive plants, and enhancing forest structural complexity and diversity to secure sufficient regeneration and avoid future forest loss. We suggest that managers of `r paste0(park_info$park)`:
+\begin{itemize}
+\item continue to reduce invasive plants through early detection and rapid response, release of approved biological controls, and strategic invasive plant management in high priority habitats.
+`r ifelse(park_text$current.active.deer.management == "yes" & park_text$reccomend.deer.management == "yes", paste0("\\", "item continue protecting forest regeneration from browse impacts through sustained deer culling and fencing."), paste(""))`
+`r ifelse(park_text$current.active.deer.management == "no" & park_text$reccomend.deer.management == "yes", paste0("\\", "item implement protection of forest regeneration from browse impacts through sustained deer culling and fencing."), paste(""))`
+`r ifelse(park_text$thinning...canopy.gaps == "yes", paste0("\\", "item assess forest stands at risk or already impacted by pests / pathogens and prioritize invasive plant management in stands where canopy gaps have increased / will increase light to the forest floor."), paste(""))`
+`r ifelse(park_text$prescribed.burning == "yes", paste0("\\", "item use prescribed burning in dry, fire-adapted forests to promote canopy tree regeneration."), paste(""))`
+`r ifelse(park_text$thinning...canopy.gaps == "yes", paste0("\\", "item promote native tree regeneration by increasing light to the forest floor through thinning less desirable subcanopy trees in areas with minimal impacts from deer and invasive plants."), paste(""))`
+\end{itemize}
+
+We also recommend that managers assess the following strategies for future action:
+\begin{itemize}
+`r ifelse(park_text$reccomend.deer.management == "no" & park_info$park == "DEWA" | park_info$park == "GARI" | park_info$park == "NERI" | park_info$park == "BLUE", paste0("\\", "item promote increased deer hunting within the park."), ifelse(park_text$reccomend.deer.management == "no" & park_info$park != "DEWA" | park_info$park != "GARI" | park_info$park != "NERI" | park_info$park != "BLUE", paste0("\\", "item protect forest regeneration from browse impacts through sustained deer culling and fencing."), paste("")))`
+`r ifelse(park_text$thinning...canopy.gaps == "no", paste0("\\", "item assess forest stands at risk or already impacted by pests / pathogens and prioritize invasive plant management in stands where canopy gaps have increased / will increase light to the forest floor."), paste(""))`
+`r ifelse(park_text$prescribed.burning == "no", paste0("\\", "item use of prescribed burning in dry, fire-adapted forests to promote canopy tree regeneration."), paste(""))`
+`r ifelse(park_text$thinning...canopy.gaps == "no", paste0("\\", "item increasing light to the forest floor by thinning less desirable subcanopy trees in areas with minimal impacts from deer and invasive plants."), paste(""))`
+\end{itemize}
+
+`r ifelse(park_data$park_reggrp == "Imminent Failure", paste0("These management efforts are especially important for ", park_info$park, " as the park is at very high risk of losing forest cover without intervention."), ifelse(park_data$park_reggrp == "Probable Failure", paste0("These management efforts are especially important for ", park_info$park, " as the park is at high risk of losing forest cover without intervention."), paste0("These management efforts are important for ", park_info$park, " to facilitate future forest cover.")))` Conditions are changing rapidly across parks, therefore continued monitoring and reassessment of management actions is necessary to avoid future forest loss in the park. Please refer to the source publication for more information on management strategies and reach out to the contact below for further assistance.
+\end{flushleft}
+
+<!-- \item protect native tree regeneration within canopy gaps. -->
+
+<!-- `r ifelse(park_data$park_reggrp == "Imminent Failure" | park_data$park_reggrp == "Probable Failure", paste0("These efforts are especially important for ", park_info$park, " as the park is at risk of losing forest cover without intervention."), paste(""))` -->
+
+<!-- We suggest that managers of `r paste(park_info$park)` continue invasive plant management actions, as is true for all of the eastern national parks in this study. `r paste(mgtst)`  -->
+
+\color{black}
+\rule{\linewidth}{0.2mm}
+
+\begin{flushleft}
+\Large\textsf {Resources}
+\normalsize
+\begin{flushleft}
+\tiny {}
+\end{flushleft}
+{\bf Source Publication:} Miller K., Perles S., Schmit J.P., Matthews E., Weed A., Comiskey J., Marshall M., Nelson P., Fisichelli N. 202X. Forests in eastern national parks face widespread regeneration debt. Ecological Applications.
+\begin{flushleft}
+\tiny {}
+\end{flushleft}
+{\bf Contact:}`r ifelse(park_info$Network == "NETN", paste(" Kate Miller, NETN Quantitative Ecologist (kathryn.miller@nps.gov)"), ifelse(park_info$Network == "MIDN", paste(" Kate Miller, MIDN Quantitative Ecologist (kathryn.miller@nps.gov)"), ifelse(park_info$Network == "NCBN", paste(" Kate Miller, NCBN Quantitative Ecologist (kathryn.miller@nps.gov)"), ifelse(park_info$Network == "NCRN", paste(" Elizabeth Matthews, NCRN Regional Program Manager (elizabeth.matthews@nps.gov)"), ifelse(park_info$Network == "ERMN", paste(" Stephanie Perles, ERMN Plant Ecologist (stephanie.perles@nps.gov)"), paste("ERROR"))))))`
+\begin{flushleft}
+\tiny {}
+\end{flushleft}
+{\bf Links:} \href{https://www.nps.gov/articles/series.htm?id=B9C6B751-A7E3-F246-5628389A0B80A4F7}{\uline{\color{blue} {Managing Resilient Forests Initiative for Eastern National Parks}}}
+\end{flushleft}
 
