@@ -4,24 +4,12 @@
 # Source function
 source("./briefs/scripts/run_briefs_function.R")
 
-# Read in data
-# park_data <- read.csv("./results/20220325/final_park_results.csv") %>% 
-#   select(park, park_reggrp) %>% 
-#   distinct() %>% 
-#   mutate(park_reggrp = str_replace(park_reggrp, "Sec.", "Secure"))
 
-park_names <- read.csv("./data/park_names.csv") %>% 
-  #left_join(., park_data, by = "park") %>% 
-  filter(park == "ACAD" |  park == "CATO" | park == "GARI" 
-         | park == "HOFU" | park == "NERI")
+## Read in the data
+park_names <- read.csv("./data/park_names.csv")
 
-park_names <- read.csv("./data/park_names.csv")# %>% 
-  #filter(park == "MORR")
-  #filter(park != "FRSP")
-  #left_join(., park_data, by = "park") %>% 
-  #filter(park == "FRSP")
 
-# Create briefs
+## Create briefs
 run_briefs(park_names)
 
 
