@@ -18,7 +18,6 @@ header-includes:
   - \chead[C]{\ifnum\value{page} < 2 {\textcolor{white}{\hspace{7.7cm}\textsf{National Park Service\\ \hspace{9.2cm}U.S. Department of the Interior\\ \vspace{0.8cm}}} {\textcolor{red}{\Huge\textsf{DRAFT}}}} \else \fi}
   - \fancyhead[R]{\ifnum\value{page} < 2 {\includegraphics[height=.95in,width=.95in]{inputs/NPS_logo.png}} \else {\textsf {\today}}\small \fi}
   - \setlength{\footskip}{34pt}
-  - \fancyfoot[L]{\textcolor{red}{\large\textsf{DRAFT}}}
   - \fancyfoot[C]{\thepage\footnotesize}
   - \rfoot{\ifnum\value{page} > 1 \href{https://schoodicinstitute.org}{\includegraphics[height=\footskip]{inputs/Schoodic_Stacked.jpeg}} \href{https://www.nps.gov/index.htm}{\includegraphics[height=\footskip]{inputs/NPS_logo.png}} \else \fi}
   - \backgroundsetup{scale=1,opacity=0.5,angle=0,placement=bottom,contents={\ifnum\value{page} > 1 {\includegraphics[width=8.5in]{inputs/background2.jpg}} \else \fi}}
@@ -186,17 +185,17 @@ notable <- if (park_text$notable.findings == "none") {
   
   paste(" ", park_info$park, " shows an increase in native canopy saplings.")
   
-} else if (park_text$notable.findings == "regeneration mismatch ") {
+} else if (park_text$notable.findings == "regeneration mismatch") {
   
-  paste0(" ", park_info$park, " is experiencing regeneration mismatch between the forest canopy layer and seedling layer due to an abundance of regeneration from species which do not form an overstory canopy. In this park, the mismatch is occurring due to ", park_text$x, ".")
-  
+  paste0(" Forests in ", park_info$park, " have regeneration mismatch between the forest canopy layer and seedling layer due to an abundance of regeneration from species which do not form an overstory canopy, including ", park_text$x, ". As these forests mature, the dominance of short-statured trees will alter the composition and structure of the forests.")
+
 }
 ```
 
 \begin{flushleft}\tiny {}\end{flushleft}
 \begin{flushleft}\tiny {}\end{flushleft}
 \begin{center}
-\huge\textsf {`r ifelse(park_data$park_reggrp == "Imminent Failure", paste0("Imminent Failure of Forest Regeneration Requires Sustained Management in ", park_info$park_full), ifelse(park_data$park_reggrp == "Probable Failure", paste0("Probable Failure of Forest Regeneration Requires Sustained Management in ", park_info$park_full), ifelse(park_data$park_reggrp == "Insecure", paste0("Insecure Forest Regeneration Needs Sustained Management in ", park_info$park_full), ifelse(park_data$park_reggrp == "Secure", paste0("Forest Regeneration is Secure in ", park_info$park_full), paste("")))))`}
+\LARGE\textsf {`r ifelse(park_data$park_reggrp == "Imminent Failure", paste0("Imminent Failure of Forest Regeneration Requires Sustained Management in ", park_info$park_full), ifelse(park_data$park_reggrp == "Probable Failure", paste0("Probable Failure of Forest Regeneration Requires Sustained Management in ", park_info$park_full), ifelse(park_data$park_reggrp == "Insecure", paste0("Insecure Forest Regeneration Needs Sustained Management in ", park_info$park_full), ifelse(park_data$park_reggrp == "Secure", paste0("Forest Regeneration is Secure in ", park_info$park_full), paste("")))))`}
 \end{center}
 
 <!-- `r ifelse(park_data$park_reggrp == "Imminent Failure", paste0("Forest Regeneration Failure is Imminent in ", park_info$park_full), ifelse(park_data$park_reggrp == "Probable Failure", paste0("Forest Regeneration will Probably Fail in ", park_info$park_full), ifelse(park_data$park_reggrp == "Insecure", paste0("Insecure Forest Regeneration needs Sustained Management in ", park_info$park_full), ifelse(park_data$park_reggrp == "Secure", paste0("Forest Regeneration is Secure in ", park_info$park_full), paste("")))))` -->
@@ -235,13 +234,9 @@ Five NPS Inventory and Monitoring Networks assessed 10 regeneration metrics in 3
 On a four-category scale (Secure, Insecure, Probable Failure, and Imminent Failure), `r paste(park_info$park)` has a forest regeneration status of \textbf{`r paste(park_data$park_reggrp)`} (Figure 2). This means that the park `r ifelse(park_data$park_reggrp == "Imminent Failure", paste("is experiencing severe regeneration failure and has an elevated risk of forest loss. Since park forests don't contain enough seedlings and saplings of native canopy-forming trees, canopy gaps caused by storms or insect pests are likely to convert to impenetrable thickets of invasive shrubs, leading to forest loss"), ifelse(park_data$park_reggrp == "Probable Failure", paste("is experiencing regeneration failure as indicated by inadequate and/or decreasing saplings, and low numbers of seedlings"), ifelse(park_data$park_reggrp == "Insecure", paste("currently lacks adequate saplings and seedlings, and generally has moderate deer browse impacts"), paste("currently has abundant seedlings and saplings, and shows few concerning trends in regeneration metrics"))))`.`r paste(notable)``r ifelse(park_text$findings.2 != "none", paste0(" Additionally, we found ", park_text$findings.2, " in the park."), paste(""))` The trends over time in tree, sapling, and seedling abundance by native canopy, subcanopy, and exotics are shown in Figure 3.
 \end{flushleft}
 
-\begin{flushleft}
-\tiny {}
-\end{flushleft}
-
 \begin{figure}
 \centering
-\begin{minipage}{.65\textwidth}
+\begin{minipage}{.63\textwidth}
 \centering
 \includegraphics[width=1\linewidth]{inputs/Region1_manuscript.jpg}
 \captionof{figure}{\textsf {\textbf {Figure 1}. Map of parks included in regional regeneration project and forest regeneration status. `r paste(park_info$park_full)` is located in the `r ifelse(park_info$Network == "NETN", paste("Northeast Temperate"), ifelse(park_info$Network == "NCRN", paste("National Capital Region"), ifelse(park_info$Network == "NCBN", paste("Northeast Coastal and Barrier"), ifelse(park_info$Network == "MIDN", paste("Mid-Atlantic"), paste("Eastern Rivers and Mountains")))))` `r paste0( '(', park_info$Network, ')')` Inventory and Monitoring Network.}}
@@ -281,6 +276,7 @@ Eastern national parks need a sustained commitment to reducing deer browse impac
 `r ifelse(park_text$current.active.deer.management == "no" & park_text$reccomend.deer.management == "yes", paste0("\\", "item implement protection of forest regeneration from browse impacts through sustained deer culling to maintain ecologically-sustainable deer numbers."), paste(""))`
 \item continue to reduce invasive plants through early detection and rapid response, release of approved biological controls, and strategic invasive plant management in high priority habitats.
 `r ifelse(park_text$thinning...canopy.gaps == "yes", paste0("\\", "item assess forest stands at risk or already impacted by pests / pathogens and prioritize invasive plant management in stands where canopy gaps have increased or may soon increase light to the forest floor."), paste(""))`
+`r ifelse(park_text$gapmanage == "yes", paste0("\\", "item assess forest stands at risk or already impacted by pests / pathogens and prioritize invasive plant management in stands where canopy gaps have increased or may soon increase light to the forest floor."), paste(""))`
 `r ifelse(park_text$prescribed.burning == "yes", paste0("\\", "item use prescribed burning in dry, fire-adapted forests to promote canopy tree regeneration."), paste(""))`
 `r ifelse(park_text$thinning...canopy.gaps == "yes", paste0("\\", "item promote native tree regeneration by increasing light to the forest floor through thinning less desirable subcanopy trees only in areas with minimal impacts from deer, forest pathogens, and invasive plants."), paste(""))`
 \end{itemize}

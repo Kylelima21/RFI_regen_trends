@@ -1,40 +1,40 @@
-Network,park,Park_Name,Regeneration Status,Regen Failure Rank,Notable findings,,findings.2,Reccomend Deer Management,Current Active Deer Management,Invasive Plant Management,Thinning / Canopy Gaps,Prescribed Burning
-NCRN,CATO,Catoctin Mountain Park,Imminent Failure,1,regeneration mismatch,abundant ash,none,yes,yes,yes,yes,yes
-NCRN,CHOH,Chesapeake and Ohio Canal National Historical Park,Imminent Failure,1,regeneration mismatch,paw paw in the regeneration layer,none,yes,yes,yes,no,yes
-ERMN,FRHI,Friendship Hill National Historic Site,Imminent Failure,1,regeneration mismatch,abundant ash,none,yes,no,yes,no,no
-NCBN,GEWA,George Washington Birthplace National Monument,Imminent Failure,1,regeneration mismatch,paw paw and other native species,none,yes,no,yes,no,yes
-NCRN,GWMP,George Washington Memorial Parkway,Imminent Failure,1,regeneration mismatch,paw paw in the regeneration layer,none,yes,no,yes,no,no
-NCRN,HAFE,Harpers Ferry National Historical Park,Imminent Failure,1,regeneration mismatch,paw paw in the regeneration layer,increasing exotic seedlings,yes,yes,yes,no,yes
-NCRN,MANA,Manassas National Battlefield Park,Imminent Failure,1,regeneration mismatch,abundant ash,none,yes,yes,yes,no,yes
-NETN,MORR,Morristown National Historical Park,Imminent Failure,1,forest loss projected from lack of young trees,,none,yes,no,yes,no,yes
-NCBN,SAHI,Sagamore Hill National Historic Site,Imminent Failure,1,forest loss projected from lack of young trees,,increasing exotic tree regeneration,yes,no,yes,no,no
-NETN,SARA,Saratoga National Historical Park,Imminent Failure,1,increase exotic trees/sap/seed,,none,yes,no,yes,no,yes
-NCBN,THST,Thomas Stone National Historic Site,Imminent Failure,1,regeneration mismatch,paw paw in the regeneration layer,none,yes,no,yes,no,yes
-MIDN,VAFO,Valley Forge National Historical Park,Imminent Failure,1,increase exotic seedlings,,none,yes,yes,yes,no,yes
-ERMN,ALPO,Allegheny Portage Railroad National Historic Site,Probable Failure,2,regeneration mismatch,"non-canopy forming native species, including striped maple",none,no,no,yes,no,no
-NCRN,ANTI,Antietam National Battlefield,Probable Failure,2,regeneration mismatch,paw paw in the regeneration layer,none,yes,yes,yes,no,no
-ERMN,BLUE,Bluestone National Scenic River,Probable Failure,2,regeneration mismatch,abundant ash,none,no,no,yes,yes,yes
-NCBN,COLO,Colonial National Historical Park,Probable Failure,2,regeneration mismatch,paw paw in the regeneration layer,none,yes,no,yes,no,no
-ERMN,DEWA,Delaware Water Gap National Recreation Area,Probable Failure,2,none,,none,no,no,yes,no,no
-ERMN,FONE,Fort Necessity National Battlefield,Probable Failure,2,increase exotic seedlings,,none,no,no,yes,no,no
-MIDN,GETT,Gettysburg National Military Park,Probable Failure,2,regeneration mismatch,abundant ash,increasing exotic saplings,yes,yes,yes,no,yes
-MIDN,HOFU,Hopewell Furnace National Historic Site,Probable Failure,2,regeneration mismatch,abundant ash,none,yes,no,yes,no,yes
-ERMN,JOFL,Johnstown Flood National Memorial,Probable Failure,2,regeneration mismatch,abundant ash,none,no,no,yes,no,no
-NETN,MIMA,Minute Man National Historical Park,Probable Failure,2,none,,none,yes,no,yes,no,yes
-NETN,MABI,Marsh-Billings-Rockefeller National Historical Park,Probable Failure,2,none,,none,yes,no,yes,no,no
-NCRN,MONO,Monocacy National Battlefield,Probable Failure,2,increase exotic seedlings,,none,yes,yes,yes,no,no
-NCRN,PRWI,Prince William Forest Park,Probable Failure,2,decline in native seedlings,,none,yes,no,yes,no,yes
-NCRN,ROCR,Rock Creek Park,Probable Failure,2,none,,none,yes,yes,yes,no,yes
-NETN,WEFA,Weir Farm National Historical Park,Probable Failure,2,none,,none,yes,no,yes,no,no
-MIDN,APCO,Appomattox Court House National Historical Park,Insecure,3,none,,none,no,no,yes,yes,yes
-MIDN,BOWA,Booker T. Washington National Monument,Insecure,3,none,,none,no,no,yes,yes,yes
-MIDN,FRSP,Fredericksburg & Spotsylvania National Military Park,Insecure,3,none,,none,no,no,yes,yes,yes
-ERMN,GARI,Gauley River National Recreation Area,Insecure,3,none,,none,no,no,yes,yes,yes
-NCRN,NACE,National Capital Parks East,Insecure,3,regeneration mismatch,paw paw in the regeneration layer,increasing exotic seedlings,no,no,yes,no,no
-ERMN,NERI,New River Gorge National Park and Preserve,Insecure,3,none,,none,no,no,yes,yes,yes
-MIDN,PETE,Petersburg National Battlefield,Insecure,3,none,,none,no,no,yes,no,yes
-MIDN,RICH,Richmond National Battlefield Park,Insecure,3,none,,none,no,no,yes,yes,yes
-NETN,ROVA,Roosevelt-Vanderbilt National Historic Sites,Insecure,3,none,,none,no,no,yes,no,no
-NETN,SAGA,Saint-Gaudens National Historical Park,Insecure,3,increase native canopy saplings,,none,no,no,yes,no,no
-NCRN,WOTR,Wolf Trap Park for the Performing Arts,Insecure,3,none,,none,no,no,yes,no,no
-NETN,ACAD,Acadia National Park,Secure,4,none,,none,no,no,yes,no,no
+Network,park,Park_Name,Regeneration Status,Regen Failure Rank,Notable findings,,findings.2,Reccomend Deer Management,Current Active Deer Management,Invasive Plant Management,Thinning / Canopy Gaps,Prescribed Burning,gapmanage
+NCRN,CATO,Catoctin Mountain Park,Imminent Failure,1,regeneration mismatch,abundant ash,none,yes,yes,yes,yes,yes,no
+NCRN,CHOH,Chesapeake and Ohio Canal National Historical Park,Imminent Failure,1,regeneration mismatch,paw paw in the regeneration layer,none,yes,yes,yes,no,yes,no
+ERMN,FRHI,Friendship Hill National Historic Site,Imminent Failure,1,regeneration mismatch,abundant ash,none,yes,no,yes,no,no,yes
+NCBN,GEWA,George Washington Birthplace National Monument,Imminent Failure,1,regeneration mismatch,paw paw and other native species,none,yes,no,yes,no,yes,no
+NCRN,GWMP,George Washington Memorial Parkway,Imminent Failure,1,regeneration mismatch,paw paw in the regeneration layer,none,yes,no,yes,no,no,no
+NCRN,HAFE,Harpers Ferry National Historical Park,Imminent Failure,1,regeneration mismatch,paw paw in the regeneration layer,increasing exotic seedlings,yes,yes,yes,no,yes,no
+NCRN,MANA,Manassas National Battlefield Park,Imminent Failure,1,regeneration mismatch,abundant ash,none,yes,yes,yes,no,yes,no
+NETN,MORR,Morristown National Historical Park,Imminent Failure,1,forest loss projected from lack of young trees,,none,yes,no,yes,no,yes,no
+NCBN,SAHI,Sagamore Hill National Historic Site,Imminent Failure,1,forest loss projected from lack of young trees,,increasing exotic tree regeneration,yes,no,yes,no,no,no
+NETN,SARA,Saratoga National Historical Park,Imminent Failure,1,increase exotic trees/sap/seed,,none,yes,no,yes,no,yes,no
+NCBN,THST,Thomas Stone National Historic Site,Imminent Failure,1,regeneration mismatch,paw paw in the regeneration layer,none,yes,no,yes,no,yes,no
+MIDN,VAFO,Valley Forge National Historical Park,Imminent Failure,1,increase exotic seedlings,,none,yes,yes,yes,no,yes,no
+ERMN,ALPO,Allegheny Portage Railroad National Historic Site,Probable Failure,2,regeneration mismatch,"non-canopy forming native species, including striped maple",none,no,no,yes,no,no,yes
+NCRN,ANTI,Antietam National Battlefield,Probable Failure,2,regeneration mismatch,paw paw in the regeneration layer,none,yes,yes,yes,no,no,no
+ERMN,BLUE,Bluestone National Scenic River,Probable Failure,2,regeneration mismatch,abundant ash,none,yes,no,yes,yes,yes,no
+NCBN,COLO,Colonial National Historical Park,Probable Failure,2,regeneration mismatch,paw paw in the regeneration layer,none,yes,no,yes,no,no,no
+ERMN,DEWA,Delaware Water Gap National Recreation Area,Probable Failure,2,none,,none,yes,no,yes,no,yes,yes
+ERMN,FONE,Fort Necessity National Battlefield,Probable Failure,2,increase exotic seedlings,,none,no,no,yes,no,yes,yes
+MIDN,GETT,Gettysburg National Military Park,Probable Failure,2,regeneration mismatch,abundant ash,increasing exotic saplings,yes,yes,yes,no,yes,no
+MIDN,HOFU,Hopewell Furnace National Historic Site,Probable Failure,2,regeneration mismatch,abundant ash,none,yes,no,yes,no,yes,no
+ERMN,JOFL,Johnstown Flood National Memorial,Probable Failure,2,regeneration mismatch,abundant ash,none,no,no,yes,no,no,yes
+NETN,MIMA,Minute Man National Historical Park,Probable Failure,2,none,,none,yes,no,yes,no,yes,no
+NETN,MABI,Marsh-Billings-Rockefeller National Historical Park,Probable Failure,2,none,,none,yes,no,yes,no,no,no
+NCRN,MONO,Monocacy National Battlefield,Probable Failure,2,increase exotic seedlings,,none,yes,yes,yes,no,no,no
+NCRN,PRWI,Prince William Forest Park,Probable Failure,2,decline in native seedlings,,none,yes,no,yes,no,yes,no
+NCRN,ROCR,Rock Creek Park,Probable Failure,2,none,,none,yes,yes,yes,no,yes,no
+NETN,WEFA,Weir Farm National Historical Park,Probable Failure,2,none,,none,yes,no,yes,no,no,no
+MIDN,APCO,Appomattox Court House National Historical Park,Insecure,3,none,,none,no,no,yes,yes,yes,no
+MIDN,BOWA,Booker T. Washington National Monument,Insecure,3,none,,none,no,no,yes,yes,yes,no
+MIDN,FRSP,Fredericksburg & Spotsylvania National Military Park,Insecure,3,none,,none,no,no,yes,yes,yes,no
+ERMN,GARI,Gauley River National Recreation Area,Insecure,3,none,,none,yes,no,yes,yes,yes,no
+NCRN,NACE,National Capital Parks East,Insecure,3,regeneration mismatch,paw paw in the regeneration layer,increasing exotic seedlings,no,no,yes,no,no,no
+ERMN,NERI,New River Gorge National Park and Preserve,Insecure,3,none,,none,yes,no,yes,yes,yes,no
+MIDN,PETE,Petersburg National Battlefield,Insecure,3,none,,none,no,no,yes,no,yes,no
+MIDN,RICH,Richmond National Battlefield Park,Insecure,3,none,,none,no,no,yes,yes,yes,no
+NETN,ROVA,Roosevelt-Vanderbilt National Historic Sites,Insecure,3,none,,none,no,no,yes,no,no,no
+NETN,SAGA,Saint-Gaudens National Historical Park,Insecure,3,increase native canopy saplings,,none,no,no,yes,no,no,no
+NCRN,WOTR,Wolf Trap Park for the Performing Arts,Insecure,3,none,,none,no,no,yes,no,no,no
+NETN,ACAD,Acadia National Park,Secure,4,none,,none,no,no,yes,no,no,no
