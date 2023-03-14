@@ -6,10 +6,11 @@ source("./briefs/scripts/run_briefs_function.R")
 
 
 ## Read in the data
-park_names <- read.csv("./data/park_names.csv")
+park_names <- read.csv("./data/park_names.csv") #%>% 
+  #filter(park == "CATO")
 
 
 ## Create briefs
 run_briefs(park_names)
-
+ 
 
